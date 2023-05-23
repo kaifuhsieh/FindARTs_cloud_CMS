@@ -1,0 +1,198 @@
+<link rel="stylesheet" href="components/header/auo-header.css" />
+<!-- header -->
+<header class="auo-header">
+    <div class="container">
+        <div class="logo">
+            <a href="index.htm">
+                <img src="images/logo.png" alt="" />
+            </a>
+        </div>
+        <div class="user_function">
+            <!-- language -->
+            <div class="component_language">
+                <button type="button" class="langBtn">
+                    <img src="images/icon/i_global.svg" alt="" />
+                    <span>繁體中文</span>
+                </button>
+                <div class="languageBlock">
+                    <ul>
+                        <li><a href="#">繁體中文</a></li>
+                        <li><a href="#">ENGLISH</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- alert -->
+            <div class="component_alert">
+                <button type="button" class="alertBtn">
+                    <img src="images/icon/i_alert_color.svg" alt="" />
+                    <div class="count">99</div>
+                </button>
+                <div class="alertBlock">
+                    <div class="scrollArea">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><time>2022-12-12</time>
+                                    <span
+                                        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nulla
+                                        dignissimos ducimus minima nemo dolorem vel non? Ut earum deleniti animi, unde
+                                        in dolor, distinctio dicta eaque reprehenderit, eum excepturi.</span
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><time>2022-12-12</time>
+                                    <span> 訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><time>2022-12-12</time>
+                                    <span> 訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><time>2022-12-12</time>
+                                    <span> 訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息訊息</span></a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="more_block">
+                        <a href="#" class="more">更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- admin_panel -->
+            <div class="component_admin">
+                <button type="button" class="adminBtn">
+                    <img src="images/avatar.jpg" alt="" />
+                    <span class="myName">Henry</span>
+                </button>
+                <div class="adminBlock">
+                    <ul>
+                        <li><a href="#">功能選單1</a></li>
+                        <li><a href="#">功能選單2</a></li>
+                        <li><a href="#">功能選單3</a></li>
+                        <li><a href="#">功能選單4</a></li>
+                    </ul>
+                    <div class="btn_grp">
+                        <button type="button" class="btn btn-red">
+                            <img src="images/icon/i_power.svg" alt="" />登出
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- JQ -->
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script>
+    $(function () {
+        //關閉所有下拉
+        function closeAllBlock() {
+            $('.alertBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+            alertStatus = false;
+            $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+            lanStatus = false;
+            $('.adminBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+            adminStatus = false;
+        }
+        //language
+        if ($('.langBtn').length > 0) {
+            var lanStatus = false;
+            $('.langBtn')
+                .off()
+                .click(function (e) {
+                    if (!lanStatus) {
+                        closeAllBlock();
+                        $('.languageBlock').stop(true, true).addClass('open').slideDown('600', 'easeOutQuint');
+                        lanStatus = true;
+                    } else {
+                        $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+                        lanStatus = false;
+                    }
+                    e.preventDefault();
+                });
+            // click document close lang
+            function closeLang() {
+                $('.languageBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+            }
+            $('html').click(function (e) {
+                if (lanStatus) {
+                    closeLang();
+                    lanStatus = false;
+                }
+            });
+            $('.languageBlock ,.langBtn').click(function (e) {
+                e.stopPropagation();
+            });
+        }
+        //alert
+        if ($('.alertBtn').length > 0) {
+            var alertStatus = false;
+            $('.alertBtn')
+                .off()
+                .click(function (e) {
+                    if (!alertStatus) {
+                        closeAllBlock();
+                        $('.alertBlock').stop(true, true).addClass('open').slideDown('600', 'easeOutQuint');
+                        alertStatus = true;
+                    } else {
+                        $('.alertBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+                        alertStatus = false;
+                    }
+                    e.preventDefault();
+                });
+            // click document close lang
+            function closeAlert() {
+                $('.alertBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+            }
+            $('html').click(function (e) {
+                if (alertStatus) {
+                    closeAlert();
+                    alertStatus = false;
+                }
+            });
+            $('.alertBlock ,.alertBtn').click(function (e) {
+                e.stopPropagation();
+            });
+        }
+        //admin
+        if ($('.adminBtn').length > 0) {
+            var adminStatus = false;
+            $('.adminBtn')
+                .off()
+                .click(function (e) {
+                    if (!adminStatus) {
+                        closeAllBlock();
+                        $('.adminBlock').stop(true, true).addClass('open').slideDown('600', 'easeOutQuint');
+                        adminStatus = true;
+                    } else {
+                        $('.adminBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+                        adminStatus = false;
+                    }
+                    e.preventDefault();
+                });
+            // click document close lang
+            function closeAdmin() {
+                $('.adminBlock').stop(true, true).removeClass('open').slideUp('600', 'easeOutQuint');
+            }
+            $('html').click(function (e) {
+                if (adminStatus) {
+                    closeAdmin();
+                    adminStatus = false;
+                }
+            });
+            $('.adminBlock ,.adminBtn').click(function (e) {
+                e.stopPropagation();
+            });
+        }
+    });
+</script>

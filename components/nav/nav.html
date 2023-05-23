@@ -1,0 +1,141 @@
+<!-- nav -->
+<link rel="stylesheet" href="components/nav/auo-nav.css" />
+<nav class="auo-nav">
+    <div class="scrollArea">
+        <h3>MENU</h3>
+        <ul>
+            <li>
+                <a href="#"><img src="images/icon/i_chart.svg" alt="" /><span>Dashboards</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_layout.svg" alt="" /><span>Layouts</span></a>
+            </li>
+        </ul>
+        <h3>系統設定</h3>
+        <ul>
+            <li>
+                <a href="#"><img src="images/icon/i_ap.svg" alt="" /><span>AP程式管理</span><em class="new">new</em></a>
+                <ul>
+                    <li>
+                        <a href="#"><span>副選單1</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單2</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"
+                    ><img src="images/icon/i_people.svg" alt="" /><span>使用者管理</span><em class="new">new</em></a
+                >
+                <ul>
+                    <li>
+                        <a href="#"><span>副選單1</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單2</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單3</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單4</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單5</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單6</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單7</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>副選單8</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_lock.svg" alt="" /><span>權限管理</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_code.svg" alt="" /><span>代碼管理</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_organiztion.svg" alt="" /><span>組織架構</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_building.svg" alt="" /><span>商用組織管理</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_setting.svg" alt="" /><span>選單管理</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_setting.svg" alt="" /><span>單元管理</span></a>
+            </li>
+        </ul>
+        <h3>系統管理</h3>
+        <ul>
+            <li>
+                <a href="#"><img src="images/icon/i_picture.svg" alt="" /><span>授權管理</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_edit.svg" alt="" /><span>數位上稿</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_edit.svg" alt="" /><span>租賃合約</span></a>
+                <ul>
+                    <li>
+                        <a href="#"><span>附約管理</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>場址管理</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_computer.svg" alt="" /><span>設備上架</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_doc.svg" alt="" /><span>公告資訊</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_color.svg" alt="" /><span>色彩校色管理</span></a>
+            </li>
+        </ul>
+        <h3>系統功能</h3>
+        <ul>
+            <li>
+                <a href="#"><img src="images/icon/i_server.svg" alt="" /><span>系統報表</span></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon/i_doc.svg" alt="" /><span>系統log紀錄</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- JQ -->
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script>
+    $(function () {
+        //判斷有沒有下一層
+        $('.auo-nav').find('li').has('ul').children('a').addClass('hasChild');
+        let _hasChild = $('.hasChild');
+        let _subMenu = $('.hasChild').siblings('ul');
+        _subMenu.hide();
+
+        //toggle dropdowm menu
+        $('.auo-nav')
+            .find(_hasChild)
+            .each(function () {
+                $(this)
+                    .off()
+                    .click(function (e) {
+                        $(this).siblings(_subMenu).stop().slideToggle('600', 'easeOutQuint');
+                        $(this).stop().toggleClass('open');
+                        e.preventDefault();
+                    });
+            });
+    });
+</script>

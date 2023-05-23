@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>數位藝術畫</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="h3_title">著作圖檔</h3>
+                <p class="info">
+                    <img src="images/icon/i_information.svg" alt="" />
+                    Fill all information below區塊說明
+                </p>
+                <!-- controlPanel -->
+                <div class="controlPanel">
+                    <div class="form_grid">
+                        <div class="form_grp">
+                            <div class="field_name">Digital Art ID</div>
+                            <div class="form_content">系統產生Y1234567890</div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-add btn-green">
+                        <img src="images/icon/i_plus.svg" alt="" />新增尺寸
+                    </button>
+                </div>
+                <!-- main -->
+
+                <div class="gridBlock">
+                    <div class="flex-6-6">
+                        <div class="col">
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        圖檔類型<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <select name="" id="">
+                                            <option value="2K2K ">2K2K</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="btn_grp nomargin">
+                                <button type="button" class="btn btn-blue">
+                                    <img src="images/icon/i_edit.svg" alt="" />編輯
+                                </button>
+                                <button type="button" class="btn btn-blue">
+                                    <img src="images/icon/i_save.svg" alt="" />儲存
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-6-6">
+                        <div class="col">
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">圖檔說明</div>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="10">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facilis officiis sapiente aspernatur saepe iste qui aliquam temporibus doloribus dicta? Sint ex unde accusantium rerum, doloremque omnis eligendi nostrum saepe?</textarea
+                                        >
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">免付費</div>
+                                    <div class="form_content">
+                                        <div class="checkbox_grp">
+                                            <label
+                                                ><input
+                                                    type="checkbox"
+                                                    name="samplecheckbox"
+                                                    value=""
+                                                    checked=""
+                                                />一般使用</label
+                                            >
+                                            <label
+                                                ><input type="checkbox" name="samplecheckbox" value="" />展覽用</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        啟用<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="radio_grp">
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio"
+                                                    value=""
+                                                    checked=""
+                                                />啟用</label
+                                            >
+                                            <label><input type="radio" name="sampleradio" value="" />不啟用</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="form_content">
+                                        <div class="uploadFile dropzone">
+                                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                <div class="dz-default dz-message">
+                                                    <button class="dz-button" type="button">
+                                                        <img src="images/icon/i_upload.svg" alt="" />
+                                                        Drop files here or click to upload
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <script src="vendor/dropzone/dropzone.js"></script>
+                                    <script>
+                                        $('.uploadFile').dropzone({ url: '/file/post' });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gridBlock">
+                    <div class="flex-6-6">
+                        <div class="col">
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        圖檔類型<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <select name="" id="">
+                                            <option value="2K2K ">2K2K</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="btn_grp nomargin">
+                                <button type="button" class="btn btn-blue">
+                                    <img src="images/icon/i_edit.svg" alt="" />編輯
+                                </button>
+                                <button type="button" class="btn btn-blue">
+                                    <img src="images/icon/i_save.svg" alt="" />儲存
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-6-6">
+                        <div class="col">
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">圖檔說明</div>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">免付費</div>
+                                    <div class="form_content">
+                                        <div class="checkbox_grp">
+                                            <label
+                                                ><input
+                                                    type="checkbox"
+                                                    name="samplecheckbox"
+                                                    value=""
+                                                    checked=""
+                                                />一般使用</label
+                                            >
+                                            <label
+                                                ><input type="checkbox" name="samplecheckbox" value="" />展覽用</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        啟用<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="radio_grp">
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio"
+                                                    value=""
+                                                    checked=""
+                                                />啟用</label
+                                            >
+                                            <label><input type="radio" name="sampleradio" value="" />不啟用</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="form_content">
+                                        <div class="uploadFile dropzone">
+                                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                <div class="dz-default dz-message">
+                                                    <button class="dz-button" type="button">
+                                                        <img src="images/icon/i_upload.svg" alt="" />
+                                                        Drop files here or click to upload
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <script src="vendor/dropzone/dropzone.js"></script>
+                                    <script>
+                                        $('.uploadFile').dropzone({ url: '/file/post' });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <button type="button" class="btn btn-submit">回到數位藝術清單</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

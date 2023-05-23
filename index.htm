@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>findARTs CMS</title>
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <!--  預先載入-->
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+        <style>
+            body {
+                padding: 2em 0;
+                background: url(images/index_bg.jpg) no-repeat center center fixed;
+                background-size: cover;
+            }
+            a {
+                color: #0462b9;
+            }
+            a:hover,
+            a:focus {
+                color: #0fbbe6;
+            }
+            .demo_wrap {
+                max-width: 1100px;
+                margin: 0em auto 1em;
+                padding: 15px 3em 3em;
+                clear: both;
+                background: #fff;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            }
+
+            .demo_wrap h1 {
+                display: block;
+                margin: 0px auto;
+                max-width: 300px;
+                float: left;
+                margin-right: 1em;
+            }
+
+            @media screen and (max-width: 545px) {
+                .demo_wrap h1 {
+                    max-width: 100%;
+                    float: none;
+                    text-align: center;
+                }
+            }
+
+            .demo_wrap h1 img {
+                width: 200px;
+            }
+
+            .num {
+                width: 12%;
+            }
+
+            body {
+                counter-reset: num;
+            }
+
+            table {
+                font-size: 1rem;
+            }
+
+            table td:first-child {
+                width: 40px;
+            }
+
+            table td:nth-child(2) {
+                width: 260px;
+            }
+
+            table td:nth-child(3) {
+                width: auto;
+            }
+
+            table td:nth-child(4) {
+                width: 180px;
+                font-size: 0.938em;
+                color: #888;
+            }
+            table th:last-child,
+            table td:last-child {
+                width: 60px;
+                text-align: center;
+            }
+
+            table th {
+                color: #555;
+                font-size: 0.813rem;
+                text-align: left;
+                color: #666;
+            }
+
+            table td,
+            table th {
+                border-left: none;
+                border-right: none;
+                padding: 0.4em;
+            }
+
+            hr {
+                clear: both;
+            }
+
+            table td .gray {
+                color: #808080;
+                font-size: 0.938rem;
+            }
+
+            table td a {
+                display: block;
+            }
+
+            table tr th:first-child {
+                width: 30px;
+            }
+
+            table caption {
+                text-align: left;
+                font-weight: bold;
+                font-size: 1.25em;
+                padding: 0.5em 0;
+                color: #ff5050;
+            }
+
+            tbody tr td:first-child:before {
+                counter-increment: num;
+                display: block;
+                text-align: center;
+                color: #888;
+                font-size: 0.875rem;
+                content: counters(num, '.') ' ';
+            }
+
+            .btn_grp {
+                text-align: right;
+            }
+
+            @media screen and (max-width: 545px) {
+                .btn_grp {
+                    text-align: center;
+                }
+            }
+
+            .table_wrapper {
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .table_wrapper .scroltable-wrapper {
+                margin: 0;
+                flex-grow: 1;
+            }
+
+            @media screen and (max-width: 545px) {
+                .table_wrapper {
+                    flex-flow: row wrap;
+                }
+
+                .table_wrapper h2 {
+                    flex: 1 0 100%;
+                    margin-bottom: 1em;
+                }
+            }
+
+            h2 {
+                margin: 0.5em 0.25em 0.25em 0.5em;
+                font-size: 1rem;
+                line-height: 1.25em;
+                white-space: nowrap;
+            }
+
+            .table_wrapper h2 {
+                flex: 0 0 120px;
+                padding-right: 1em;
+            }
+
+            .outline {
+                outline: 2px solid red;
+            }
+
+            hr {
+                border-top: 1px dashed #ddd;
+            }
+            .btn_grp {
+                display: flex;
+                justify-content: flex-end;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="demo_wrap">
+            <h1><img src="images/logo.png" alt="" /></h1>
+            <div class="btn_grp">
+                <a href="https://github.com/kaifuhsieh/findarts_cms" class="btn">github下載</a>
+            </div>
+            <hr />
+            <!-- 授權管理 -->
+            <div class="table_wrapper">
+                <h2>授權管理</h2>
+                <!-- hyUI 標準頁面 -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>備註</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>授權管理LP</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理LP.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_新增主授權_分潤比例</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_新增主授權_分潤比例.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_新增主授權_選取組織</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_新增主授權_選取組織.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_新增主授權_選取區域</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_新增主授權_選取區域.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_CP</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_CP.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_CP_續約</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_CP_續約.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_CP_挑選屬性</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_CP_挑選屬性.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_CP_從圖庫選取</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_CP_從圖庫選取.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_CP_從圖庫選取已選取</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_CP_從圖庫選取已選取.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_CP_全部已選取</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_CP_全部已選取.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_新增主授權_無償授權</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_新增主授權_無償授權.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_新增主授權_總量點數制</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_新增主授權_總量點數制.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>授權管理_新增主授權_其他</td>
+                            <!-- 連結放到a裡面就好 -->
+                            <td><a href="授權管理_新增主授權_其他.htm"></a></td>
+                            <td></td>
+                            <td>v</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr />
+            <!-- 色彩校色管理 -->
+            <div>
+                <div class="table_wrapper">
+                    <h2>色彩校色管理</h2>
+                    <!-- hyUI 標準頁面 -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="num">編號</th>
+                                <th>頁面名稱</th>
+                                <th>檔案名稱</th>
+                                <th>備註</th>
+                                <th>狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>色彩校色管理LP</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="色彩校色管理LP.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>色彩校色管理CP</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="色彩校色管理CP.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>色彩校色管理匯入對照表</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="色彩校色管理匯入對照表.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 數位藝術 -->
+            <div>
+                <div class="table_wrapper">
+                    <h2>數位藝術檔</h2>
+                    <!-- hyUI 標準頁面 -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="num">編號</th>
+                                <th>頁面名稱</th>
+                                <th>檔案名稱</th>
+                                <th>備註</th>
+                                <th>狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>數位藝術檔LP</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="數位藝術檔LP.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>數位藝術檔_主檔_Landscape</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="數位藝術檔_主檔_Landscape.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>數位藝術檔_主檔_horizontal</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="數位藝術檔_主檔_horizontal.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>數位藝術檔_燈箱效果</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="數位藝術檔_燈箱效果.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>數位藝術檔_副檔</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="數位藝術檔_副檔.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>數位藝術檔_新增授權資料</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="數位藝術檔_新增授權資料.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>數位藝術檔_純新增主檔_Landscape</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="數位藝術檔_純新增主檔_Landscape.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr />
+            </div>
+            <!-- 租賃合約 -->
+            <div>
+                <div class="table_wrapper">
+                    <h2>租賃合約</h2>
+                    <!-- hyUI 標準頁面 -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="num">編號</th>
+                                <th>頁面名稱</th>
+                                <th>檔案名稱</th>
+                                <th>備註</th>
+                                <th>狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>租賃主合約管理LP</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="租賃主合約管理LP.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>新增租賃合約</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="新增租賃合約.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>新增租賃合約_建立附約場址資訊</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="新增租賃合約_建立附約場址資訊.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>附約管理LP</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="附約管理LP.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>新增附約</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="新增附約.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>編輯附約</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="編輯附約.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>場址管理</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="場址管理.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>新增場址</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="新增場址.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>編輯場址</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="編輯場址.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>加值圖片</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="加值圖片.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>畫作挑選</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="畫作挑選.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>畫作挑選_已選取</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="畫作挑選_已選取.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>挑選畫作_檢視全部圖片</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="挑選畫作_檢視全部圖片.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>裝置管理</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="裝置管理.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>裝置管理_新增裝置</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="裝置管理_新增裝置.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>裝置管理_編修裝置</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="裝置管理_編修裝置.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr />
+            </div>
+            <!-- 管理排程 -->
+            <div>
+                <div class="table_wrapper">
+                    <h2>管理排程</h2>
+                    <!-- hyUI 標準頁面 -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="num">編號</th>
+                                <th>頁面名稱</th>
+                                <th>檔案名稱</th>
+                                <th>備註</th>
+                                <th>狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>管理排程</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step1</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step1.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step2</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step2.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step2_alert</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step2_alert.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step2_1</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step2_1.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step2_2</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step2_2.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step2_3</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step2_3.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step3</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step3.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>管理排程_step2_製卡</td>
+                                <!-- 連結放到a裡面就好 -->
+                                <td><a href="管理排程_step2_製卡.htm"></a></td>
+                                <td></td>
+                                <td>v</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- JS -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/mt-js-all.min.js"></script>
+        <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+        <script>
+            $(function () {
+                $('tbody')
+                    .find('a')
+                    .each(function (index, el) {
+                        var Link = $(this).attr('href');
+                        $(this).text(Link);
+                    });
+                // /*------------------------------------*/
+                // ///////table 加上響應式 scroltable-wrapper/////
+                // /*------------------------------------*/
+                $('table').each(function (index, el) {
+                    //判斷沒有table_list
+                    if (
+                        $(this).parents('.table_list').length == 0 &&
+                        $(this).parents('.fix_th_table').length == 0 &&
+                        $(this).parent('form').length == 0
+                    ) {
+                        $(this).scroltable();
+                    }
+                });
+                // tablearrow arrow，為了設定箭頭
+                $('.scroltable-nav-left').append('<div class="tablearrow_left" style="display:none;"></div>');
+                $('.scroltable-nav-right').append('<div class="tablearrow_right"  style="display:none;"></div>');
+                // 固定版頭
+                function table_Arrow() {
+                    if (
+                        $('table').parents('.table_list').length == 0 &&
+                        $('table').parents('.fix_th_table').length == 0 &&
+                        $(this).parent('form').length == 0
+                    ) {
+                        if ($('.scroltable-wrapper').length > 0) {
+                            var stickyArrowTop = Math.floor($('.scroltable-wrapper').offset().top),
+                                thisScroll = Math.floor($(this).scrollTop());
+                            if (thisScroll > stickyArrowTop - 230) {
+                                $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
+                                $('.scroltable-wrapper .tablearrow_left').css(
+                                    { top: thisScroll - stickyArrowTop + 220 },
+                                    100,
+                                    'easeOutQuint'
+                                );
+                                $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
+                                $('.scroltable-wrapper .tablearrow_right').css(
+                                    { top: thisScroll - stickyArrowTop + 220 },
+                                    100,
+                                    'easeOutQuint'
+                                );
+                            } else {
+                                $('.scroltable-wrapper .tablearrow_left').css({
+                                    top: '10px',
+                                    display: 'none',
+                                });
+                                $('.scroltable-wrapper .tablearrow_right').css({
+                                    top: '10px',
+                                    display: 'none',
+                                });
+                            }
+                        }
+                    }
+                }
+                $(window).scroll(function (event) {
+                    table_Arrow();
+                });
+                var scrollTimer;
+                _window.scroll(function () {
+                    clearTimeout(scrollTimer);
+                    scrollTimer = setTimeout(function () {
+                        table_Arrow();
+                    }, 50);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>排程管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- steps -->
+                <div class="steps">
+                    <ul>
+                        <li class="now">
+                            <div class="num">1</div>
+                            <span>建立排程資料</span>
+                        </li>
+                        <li class="now">
+                            <div class="num">2</div>
+                            <span>挑選素材、客製說明牌</span>
+                        </li>
+                        <li>
+                            <div class="num">3</div>
+                            <span>預覽排程</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-8-4">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <div class="form_grid">
+                                <p class="red">
+                                    Tips : 請將右側素材，拖移進此區塊中，可上下移動調整排序
+                                </p>
+                                <div class="form_grp">
+                                    <div class="field_name">排程編號</div>
+                                    <div class="form_content">
+                                        <span>#0001</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gridBlock">
+                            <!-- weekPick -->
+                            <div class="weekPick">
+                                <button type="button" class="btn active">週日</button>
+                                <button type="button" class="btn">週一</button>
+                                <button type="button" class="btn">週二</button>
+                                <button type="button" class="btn">週三</button>
+                                <button type="button" class="btn">週四</button>
+                                <button type="button" class="btn">週五</button>
+                                <button type="button" class="btn">週六</button>
+                            </div>
+                            <!-- scheduling -->
+                            <div class="scheduling">
+                                <div class="day">週日</div>
+                                <div class="pieces">
+                                    <span class="molecular">10</span
+                                    ><span class="denominator">30</span>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/vermeer.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/picasso.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Rem provident nobis
+                                        </h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/rembrandt.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/vermeer.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/picasso.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/rembrandt.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/vermeer.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/vermeer.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/rembrandt.jpg" alt="" />
+                                    </div>
+                                    <div class="picCaption">
+                                        <h3>米開朗基羅</h3>
+                                        <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <button type="button" class="btn btn-submit">下一步</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="sidebar" class="sidebar">
+                            <div class="sidebar__inner">
+                                <script src="vendor/stickysidebar/sticky-sidebar.min.js"></script>
+                                <script type="text/javascript">
+                                    var sidebar = new StickySidebar("#sidebar", {
+                                        containerSelector: ".flex-8-4",
+                                        innerWrapperSelector: ".sidebar__inner",
+                                        //topSpacing: 100,
+                                        bottomSpacing: 220,
+                                    });
+                                </script>
+                                <div class="quickSearch">
+                                    <div class="form_grp forText">
+                                        <input
+                                            type="text"
+                                            value=""
+                                            placeholder="請輸入圖檔名等查詢關鍵字"
+                                        />
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="searchBtn btn-primary">
+                                            <img src="images/icon/i_search.svg" alt="" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="gridBlock stickySidebar">
+                                    <div class="monitor">32吋-2K4K(V)</div>
+                                    <div class="poolItem">
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <div class="selected">已選擇</div>
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- <div class="sortBtn">
+                                        <button type="button" class="btn">
+                                            <img src="images/icon/i_menu.svg" alt="" />
+                                        </button>
+                                    </div> -->
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="picCaption">
+                                                <h3>米開朗基羅</h3>
+                                                <h4>Michelangelo Di lodovico Buonarroti Simoni</h4>
+                                            </div>
+                                            <!-- dropdown -->
+                                            <!-- <div class="dropdown">
+                                        <button class="btn btn-dropdown">
+                                            <img src="images/icon/i_arrow_down.svg" alt="" />
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />設定排程、製卡
+                                            </button>
+                                            <button type="button" class="btn btn-gray">
+                                                <img
+                                                    src="images/icon/i_edit.svg"
+                                                    alt=""
+                                                />客製說明牌
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("#header").load("components/header/header.html");
+            $("#nav").load("components/nav/nav.html");
+        </script>
+    </body>
+</html>

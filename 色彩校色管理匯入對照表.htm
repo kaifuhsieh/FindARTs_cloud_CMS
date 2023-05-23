@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>色彩校色管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <div class="form_grp forText">
+                        <input
+                            type="text"
+                            value=""
+                            placeholder="請輸入硬體序號、Series No.等查詢關鍵字"
+                        />
+                    </div>
+                    <div class="form_grp forSelect">
+                        <select name="" id="">
+                            <option value="">全部欄位</option>
+                            <option value="">其他欄位</option>
+                        </select>
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="searchBtn btn-primary">
+                            <img src="images/icon/i_search.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <!-- controlPanel -->
+                <div class="controlPanel">
+                    <button type="button" class="btn-delete btn-red">
+                        <img src="images/icon/i_trash.svg" alt="" />刪除
+                    </button>
+                    <button type="button" class="btn-add btn-green">
+                        <img src="images/icon/i_plus.svg" alt="" />新增
+                    </button>
+                    <button
+                        type="button"
+                        class="btn-import btn-green"
+                        data-fancybox
+                        data-src="#hidden-content"
+                        data-options='{"touch" : false}'
+                        href="javascript:;"
+                    >
+                        <img src="images/icon/i_doc.svg" alt="" />匯入對照表
+                    </button>
+                </div>
+                <!-- fancybox -->
+                <div class="fancyLightBox" style="display: none" id="hidden-content">
+                    <h2><span>匯入對照表</span></h2>
+                    <div class="info_block">
+                        <p>
+                            檔案匯入時，請先行匯入硬體設備的色校檔案，再上傳對應的序號及Series
+                            No.。匯入時，請注意檔名是否正確對應。
+                        </p>
+                        <p class="warning">
+                            Tips :
+                            批次匯入若單筆資料有問題，須整批重新匯入，故建議每批匯入的數量少於100筆。
+                        </p>
+                    </div>
+                    <div class="step">
+                        <div class="num">1</div>
+                        <span>請上傳色校檔案</span>
+                        <p class="info">
+                            <img src="images/icon/i_information.svg" alt="" />限上傳zip檔
+                        </p>
+                    </div>
+                    <div class="uploadFile dropzone">
+                        <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                            <div class="dz-default dz-message">
+                                <button class="dz-button" type="button">
+                                    <img src="images/icon/i_upload.svg" alt="" />
+                                    Drop files here or click to upload
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="uploadFileList">
+                        <ul>
+                            <li>2022春季系列授權書 .zip</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <div class="num">2</div>
+                        <span>請上傳硬體序號與Series No.對照表</span>
+                        <p class="info">
+                            <img
+                                src="images/icon/i_information.svg"
+                                alt=""
+                            />請先行下載範本檔後，填妥必填欄位，再上傳編輯過後的範本文件。
+                        </p>
+                        <button type="button" class="btn-add btn-green">
+                            <img src="images/icon/i_edit.svg" alt="" /> 下載對照表範本檔
+                        </button>
+                    </div>
+                    <div class="uploadFile dropzone">
+                        <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                            <div class="dz-default dz-message">
+                                <button class="dz-button" type="button">
+                                    <img src="images/icon/i_upload.svg" alt="" />
+                                    Drop files here or click to upload
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="uploadFileList">
+                        <ul>
+                            <li>2022春季系列授權書 .zip</li>
+                        </ul>
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="btn btn-submit">儲存</button>
+                        <button type="button" class="btn btn-reset">取消</button>
+                    </div>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <!-- 表格樣式 -->
+                            <div class="table_wrapper">
+                                <table class="table_hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" /></th>
+                                            <th></th>
+                                            <th>
+                                                <a href="#"
+                                                    >硬體序號<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+                                            <th class="main_data">
+                                                <a href="#"
+                                                    >Series No.(自動帶出)<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+                                            <th>
+                                                <a href="#"
+                                                    >色校檔案<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+                                            <th>
+                                                <a href="#"
+                                                    >狀態(廠址編號)<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+
+                                            <th>
+                                                <a href="#"
+                                                    >最新授權起訖日<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+                                            <th>備註</th>
+                                            <th>動作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">1</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="green">CMC-TW-001</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">2</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="gray">未啟用</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">3</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="gray">未啟用</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">4</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="gray">未啟用</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">5</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="gray">未啟用</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">6</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="green">CMC-TW-001</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">7</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="green">CMC-TW-001</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">8</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="green">CMC-TW-001</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">9</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="green">CMC-TW-001</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">10</td>
+                                            <td><a href="#">AUO123456</a></td>
+                                            <td>202101003FFM</td>
+                                            <td>已上傳</td>
+                                            <td><span class="green">CMC-TW-001</span></td>
+                                            <td><time>2022/01/01</time></td>
+                                            <td>這是備註欄位的說明</td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-delete"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_trash.svg"
+                                                                alt=""
+                                                            />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("#header").load("components/header/header.html");
+            $("#nav").load("components/nav/nav.html");
+        </script>
+    </body>
+</html>

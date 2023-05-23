@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>授權管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <h3 class="searchTitle">授權主要資訊</h3>
+                    <div class="form_grp forText">
+                        <label for="">授權書名稱</label>
+                        <input type="text" value="" placeholder="請輸入授權書名稱關鍵字" />
+                    </div>
+                    <div class="form_grp forText">
+                        <label for="">授權組織</label>
+                        <input type="text" value="" placeholder="請輸入授權組織關鍵字" />
+                    </div>
+                    <div class="btn_grp">
+                        <button
+                            type="button"
+                            data-options='{"touch" : false}'
+                            class="searchBtn btn-primary"
+                            data-fancybox
+                            data-src="#hidden-content"
+                            href="javascript:;"
+                        >
+                            <!-- <img src="images/icon/i_search.svg" alt="" /> -->
+                            選取組織
+                        </button>
+                    </div>
+                    <!-- 選取組織開啟燈箱 -->
+                    <div style="display: none" id="hidden-content" class="fancyLightBox">
+                        <h2>選取組織</h2>
+                        <div class="form_grp searchArea">
+                            <input type="text" placeholder="請輸入洲別、國家名或是組織名稱" />
+                            <button type="button" class="searchBtn btn-primary">
+                                <img src="images/icon/i_search.svg" alt="" />
+                            </button>
+                        </div>
+                        <div class="pickArea">
+                            <div class="pickState">
+                                <ul>
+                                    <li><a href="#">北美洲</a></li>
+                                    <li><a href="#">亞洲</a></li>
+                                    <li><a href="#">歐洲</a></li>
+                                    <li><a href="#">非洲</a></li>
+                                    <li><a href="#">中南美洲</a></li>
+                                </ul>
+                            </div>
+                            <div class="pickCountry">
+                                <ul>
+                                    <li><a href="#">阿富汗</a></li>
+                                    <li><a href="#">亞美尼亞</a></li>
+                                    <li><a href="#">孟加拉</a></li>
+                                    <li><a href="#">柬埔寨</a></li>
+                                    <li><a href="#">台灣</a></li>
+                                    <li><a href="#">日本</a></li>
+                                    <li><a href="#">阿富汗</a></li>
+                                    <li><a href="#">亞美尼亞</a></li>
+                                    <li><a href="#">孟加拉</a></li>
+                                    <li><a href="#">柬埔寨</a></li>
+                                    <li><a href="#">台灣</a></li>
+                                    <li><a href="#">日本</a></li>
+                                    <li><a href="#">阿富汗</a></li>
+                                    <li><a href="#">亞美尼亞</a></li>
+                                    <li><a href="#">孟加拉</a></li>
+                                    <li><a href="#">柬埔寨</a></li>
+                                    <li><a href="#">台灣</a></li>
+                                    <li><a href="#">日本</a></li>
+                                </ul>
+                            </div>
+                            <div class="pickUnit">
+                                <ul>
+                                    <li><a href="#">奇美博物館</a></li>
+                                    <li><a href="#">故宮博物館</a></li>
+                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                    <li><a href="#">中國信託集團</a></li>
+                                    <li><a href="#">富邦集團</a></li>
+                                    <li><a href="#">楊三郎畫廊</a></li>
+                                    <li><a href="#">奇美博物館</a></li>
+                                    <li><a href="#">故宮博物館</a></li>
+                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                    <li><a href="#">中國信託集團</a></li>
+                                    <li><a href="#">富邦集團</a></li>
+                                    <li><a href="#">楊三郎畫廊</a></li>
+                                    <li><a href="#">奇美博物館</a></li>
+                                    <li><a href="#">故宮博物館</a></li>
+                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                    <li><a href="#">中國信託集團</a></li>
+                                    <li><a href="#">富邦集團</a></li>
+                                    <li><a href="#">楊三郎畫廊</a></li>
+                                    <li><a href="#">奇美博物館</a></li>
+                                    <li><a href="#">故宮博物館</a></li>
+                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                    <li><a href="#">中國信託集團</a></li>
+                                    <li><a href="#">富邦集團</a></li>
+                                    <li><a href="#">楊三郎畫廊</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-submit">確定</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- main -->
+                <h3 class="h3_title">授權條件歷程</h3>
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <div class="license_block">
+                                <!-- 左側編號 -->
+                                <div class="num_info">
+                                    <div class="num">1</div>
+                                    <a href="#" class="btn-alert">
+                                        <img src="images/icon/i_alert_color.svg" alt="" />
+                                    </a>
+                                </div>
+                                <!-- 右側表單 -->
+                                <div class="form_grid">
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            授權屬性<abbr
+                                                class="necessary"
+                                                title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <select name="" id="">
+                                                <option value="Display 圖檔格式">
+                                                    Display 圖檔格式
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            授權起迄日<abbr
+                                                class="necessary"
+                                                title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="datepick">
+                                                <input
+                                                    name=""
+                                                    type="text"
+                                                    value=""
+                                                    class="calendar"
+                                                    placeholder="開始日期"
+                                                />
+                                                <img src="images/icon/i_calendar.svg" alt="" />
+                                            </div>
+                                            <div class="datepick">
+                                                <input
+                                                    name=""
+                                                    type="text"
+                                                    value=""
+                                                    class="calendar"
+                                                    placeholder="結束日期"
+                                                />
+                                                <img src="images/icon/i_calendar.svg" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權使用區域</div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="" />
+                                            <button type="button" class="btn btn-primary">
+                                                選取區域
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權使用者</div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權事件</div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            授權模式<abbr
+                                                class="necessary"
+                                                title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="radio_grp">
+                                                <label
+                                                    ><input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                    />無償授權</label
+                                                >
+                                                <label
+                                                    ><input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                    />總量點數制</label
+                                                >
+                                                <label
+                                                    ><input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                    />依圖檔使用張次計價</label
+                                                >
+                                                <label
+                                                    ><input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                    />依分潤比例計費</label
+                                                >
+                                                <hr />
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                        checked
+                                                    />其他</label
+                                                >
+                                                <div class="other_option">
+                                                    <textarea
+                                                        name=""
+                                                        id=""
+                                                        cols="30"
+                                                        rows="10"
+                                                    ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權Logo圖</div>
+                                        <div class="form_content">
+                                            <div class="uploadFile dropzone">
+                                                <form
+                                                    action="/file-upload"
+                                                    class="dropzone"
+                                                    id="my-awesome-dropzone"
+                                                >
+                                                    <div class="dz-default dz-message">
+                                                        <button class="dz-button" type="button">
+                                                            <img
+                                                                src="images/icon/i_upload.svg"
+                                                                alt=""
+                                                            />
+                                                            Drop files here or click to upload
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            $(".uploadFile").dropzone({ url: "/file/post" });
+                                        </script>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            附件上傳<abbr
+                                                class="necessary"
+                                                title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="uploadFile dropzone">
+                                                <form
+                                                    action="/file-upload"
+                                                    class="dropzone"
+                                                    id="my-awesome-dropzone"
+                                                >
+                                                    <div class="dz-default dz-message">
+                                                        <button class="dz-button" type="button">
+                                                            <img
+                                                                src="images/icon/i_upload.svg"
+                                                                alt=""
+                                                            />
+                                                            Drop files here or click to upload
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="uploadFileList">
+                                                <ul>
+                                                    <li>2022春季系列授權書.pdf</li>
+                                                    <li>合作備忘錄.pdf</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <script src="vendor/dropzone/dropzone.js"></script>
+                                        <script>
+                                            $(".uploadFile").dropzone({ url: "/file/post" });
+                                        </script>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-submit">儲存</button>
+                                        <button type="button" class="btn btn-reset">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("#header").load("components/header/header.html");
+            $("#nav").load("components/nav/nav.html");
+        </script>
+    </body>
+</html>

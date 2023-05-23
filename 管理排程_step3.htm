@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>排程管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- steps -->
+                <div class="steps">
+                    <ul>
+                        <li class="now">
+                            <div class="num">1</div>
+                            <span>建立排程資料</span>
+                        </li>
+                        <li class="now">
+                            <div class="num">2</div>
+                            <span>挑選素材、客製說明牌</span>
+                        </li>
+                        <li class="now">
+                            <div class="num">3</div>
+                            <span>預覽排程</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <div class="form_grid">
+                                <p class="red">Tips : 請將右側素材，拖移進此區塊中，可上下移動調整排序</p>
+                                <div class="form_grp">
+                                    <div class="field_name">Device 編號</div>
+                                    <div class="form_content">
+                                        <span>#CM-01-8F-001</span>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">排程編號</div>
+                                    <div class="form_content">
+                                        <span>#0001</span>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">排程時間</div>
+                                    <div class="form_content"><time>2022/01/01</time> ~ <time>2022/03/31</time></div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">周期</div>
+                                    <div class="form_content">
+                                        <select name="" id="">
+                                            <option value="每週">每週</option>
+                                        </select>
+                                        <div class="other_option">
+                                            <div class="check_grp form_inline">
+                                                <label><input name="" type="checkbox" value="" checked="" />週日</label>
+                                                <label><input name="" type="checkbox" value="" checked="" />週一</label>
+                                                <label><input name="" type="checkbox" value="" />週二</label>
+                                                <label><input name="" type="checkbox" value="" />週三</label>
+                                                <label><input name="" type="checkbox" value="" />週四</label>
+                                                <label><input name="" type="checkbox" value="" />週五</label>
+                                                <label><input name="" type="checkbox" value="" />週六</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gridBlock">
+                            <!-- weekPick -->
+                            <div class="weekPick">
+                                <button type="button" class="btn active">週日</button>
+                                <button type="button" class="btn">週一</button>
+                                <!-- <button type="button" class="btn">週二</button>
+                                <button type="button" class="btn">週三</button>
+                                <button type="button" class="btn">週四</button>
+                                <button type="button" class="btn">週五</button>
+                                <button type="button" class="btn">週六</button> -->
+                            </div>
+                            <!-- scheduling -->
+                            <div class="scheduling">
+                                <div class="sort_list">
+                                    <ul>
+                                        <li>
+                                            <div class="num">排序<span>1</span></div>
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="duration">20分鐘</div>
+                                        </li>
+                                        <li>
+                                            <div class="num">排序<span>2</span></div>
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="duration">20分鐘</div>
+                                        </li>
+                                        <li>
+                                            <div class="num">排序<span>3</span></div>
+                                            <div class="img-container">
+                                                <img src="images/rembrandt.jpg" alt="" />
+                                            </div>
+                                            <div class="duration">20分鐘</div>
+                                        </li>
+                                        <li>
+                                            <div class="num">排序<span>4</span></div>
+                                            <div class="img-container">
+                                                <img src="images/vermeer.jpg" alt="" />
+                                            </div>
+                                            <div class="duration">20分鐘</div>
+                                        </li>
+                                        <li>
+                                            <div class="num">排序<span>5</span></div>
+                                            <div class="img-container">
+                                                <img src="images/picasso.jpg" alt="" />
+                                            </div>
+                                            <div class="duration">20分鐘</div>
+                                        </li>
+                                        <li>
+                                            <div class="num">排序<span>6</span></div>
+                                            <div class="img-container">
+                                                <img src="images/rembrandt.jpg" alt="" />
+                                            </div>
+                                            <div class="duration">20分鐘</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <button type="button" class="btn btn-reset">上一步</button>
+                                <button type="button" class="btn btn-submit">儲存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

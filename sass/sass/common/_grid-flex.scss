@@ -1,0 +1,86 @@
+[class^="flex-"] {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .col {
+        box-sizing: border-box;
+        @include gutter;
+    }
+}
+// B - 自行設定
+// 多欄 = 12
+.flex-12 {
+    .col {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        padding: 0;
+    }
+}
+.flex-6-6 {
+    .col {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        @include screen("tablet") {
+            flex-basis: 100%;
+        }
+    }
+}
+.flex-8-4 {
+    .col {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: calc(100% * 0.6666);
+        @include screen("tablet") {
+            flex-basis: 100%;
+        }
+        &:nth-child(2) {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: calc(100% * 0.3333);
+            @include screen("tablet") {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+.flex-4-8 {
+    .col {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: calc(100% * 0.3333);
+        @include screen("tablet") {
+            flex-basis: 100%;
+        }
+        &:nth-child(2) {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: calc(100% * 0.6666);
+            @include screen("tablet") {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+.flex-4-4-4 {
+    .col {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: calc(100% * 0.3333);
+        @include screen("tablet") {
+            flex-basis: 100%;
+        }
+    }
+}
+.flex-3-3-3-3 {
+    .col {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: calc(100% * 0.25);
+        @include screen("tablet") {
+            flex-basis: 100%;
+        }
+    }
+}

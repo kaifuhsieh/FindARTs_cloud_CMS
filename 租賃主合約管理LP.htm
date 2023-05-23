@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>租賃主合約管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <div class="form_grp forText">
+                        <input type="text" value="" placeholder="請輸入合約編號等關鍵字" />
+                    </div>
+                    <div class="form_grp forSelect">
+                        <select name="" id="">
+                            <option value="">全部欄位</option>
+                            <option value="">其他欄位</option>
+                        </select>
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="searchBtn btn-primary">
+                            <img src="images/icon/i_search.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <!-- controlPanel -->
+                <div class="controlPanel">
+                    <button type="button" class="btn-delete btn-red">
+                        <img src="images/icon/i_trash.svg" alt="" />刪除
+                    </button>
+                    <button type="button" class="btn-add btn-green">
+                        <img src="images/icon/i_plus.svg" alt="" />新增
+                    </button>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="contract_list">
+                            <!-- item-->
+                            <div class="item">
+                                <label class="checkbox"><input type="checkbox" value="" /></label>
+                                <div class="contract_num"><span>AUO PO NO.1234</span></div>
+                                <div class="type"><span>一般</span></div>
+                                <div class="contract_form">
+                                    <div class="title">合約編號</div>
+                                    <div class="form_content">
+                                        <span class="blue">100-000-001</span>
+                                    </div>
+                                    <div class="title">地區 / 國家</div>
+                                    <div class="form_content">
+                                        <div class="aurora-tag">
+                                            <ul>
+                                                <li>
+                                                    <span>北美洲</span> /
+                                                    <span>美國全區</span>
+                                                </li>
+                                                <li><span>亞洲</span> / <span>台灣</span></li>
+                                                <li>
+                                                    <span>歐洲</span> /<span>英國、法國全區</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="title">客戶名稱</div>
+                                    <div class="form_content"><span>富邦銀行-台北分行</span></div>
+                                    <div class="title">組織架構</div>
+                                    <div class="form_content"><span>富邦銀行</span></div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理附約</span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理場址</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- item-->
+                            <div class="item">
+                                <label class="checkbox"><input type="checkbox" value="" /></label>
+                                <div class="contract_num"><span>AUO PO NO.1234</span></div>
+                                <div class="type"><span>一般</span></div>
+                                <div class="contract_form">
+                                    <div class="title">合約編號</div>
+                                    <div class="form_content">
+                                        <span class="blue">100-000-001</span>
+                                    </div>
+                                    <div class="title">地區 / 國家</div>
+                                    <div class="form_content">
+                                        <div class="aurora-tag">
+                                            <ul>
+                                                <li>
+                                                    <span> 亞洲 / </span> /
+                                                    <span>台灣</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="title">客戶名稱</div>
+                                    <div class="form_content"><span>富邦銀行-台北分行</span></div>
+                                    <div class="title">組織架構</div>
+                                    <div class="form_content"><span>富邦銀行</span></div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理附約</span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理場址</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- item-->
+                            <div class="item">
+                                <label class="checkbox"><input type="checkbox" value="" /></label>
+                                <div class="contract_num"><span>AUO PO NO.1234</span></div>
+                                <div class="type"><span>一般</span></div>
+                                <div class="contract_form">
+                                    <div class="title">合約編號</div>
+                                    <div class="form_content">
+                                        <span class="blue">100-000-001</span>
+                                    </div>
+                                    <div class="title">地區 / 國家</div>
+                                    <div class="form_content">
+                                        <div class="aurora-tag">
+                                            <ul>
+                                                <li>
+                                                    <span>北美洲</span> /
+                                                    <span>美國全區</span>
+                                                </li>
+                                                <li><span>亞洲</span> / <span>台灣</span></li>
+                                                <li>
+                                                    <span>歐洲</span> /<span>英國、法國全區</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="title">客戶名稱</div>
+                                    <div class="form_content"><span>富邦銀行-台北分行</span></div>
+                                    <div class="title">組織架構</div>
+                                    <div class="form_content"><span>富邦銀行</span></div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理附約</span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理場址</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- item-->
+                            <div class="item">
+                                <label class="checkbox"><input type="checkbox" value="" /></label>
+                                <div class="contract_num"><span>AUO PO NO.1234</span></div>
+                                <div class="type"><span class="green">公開</span></div>
+                                <div class="contract_form">
+                                    <div class="title">合約編號</div>
+                                    <div class="form_content">
+                                        <span class="blue">100-000-001</span>
+                                    </div>
+                                    <div class="title">地區 / 國家</div>
+                                    <div class="form_content">
+                                        <div class="aurora-tag">
+                                            <ul>
+                                                <li>
+                                                    <span>北美洲</span> /
+                                                    <span>美國全區</span>
+                                                </li>
+                                                <li><span>亞洲</span> / <span>台灣</span></li>
+                                                <li>
+                                                    <span>歐洲</span> /<span>英國、法國全區</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="title">客戶名稱</div>
+                                    <div class="form_content"><span>富邦銀行-台北分行</span></div>
+                                    <div class="title">組織架構</div>
+                                    <div class="form_content"><span>富邦銀行</span></div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理附約</span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理場址</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- item-->
+                            <div class="item">
+                                <label class="checkbox"><input type="checkbox" value="" /></label>
+                                <div class="contract_num"><span>AUO PO NO.1234</span></div>
+                                <div class="type"><span class="orange">公開</span></div>
+                                <div class="contract_form">
+                                    <div class="title">合約編號</div>
+                                    <div class="form_content">
+                                        <span class="blue">100-000-001</span>
+                                    </div>
+                                    <div class="title">地區 / 國家</div>
+                                    <div class="form_content">
+                                        <div class="aurora-tag">
+                                            <ul>
+                                                <li>
+                                                    <span>北美洲</span> /
+                                                    <span>美國全區</span>
+                                                </li>
+                                                <li><span>亞洲</span> / <span>台灣</span></li>
+                                                <li>
+                                                    <span>歐洲</span> /<span>英國、法國全區</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="title">客戶名稱</div>
+                                    <div class="form_content"><span>富邦銀行-台北分行</span></div>
+                                    <div class="title">組織架構</div>
+                                    <div class="form_content"><span>富邦銀行</span></div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理附約</span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理場址</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- item-->
+                            <div class="item">
+                                <label class="checkbox"><input type="checkbox" value="" /></label>
+                                <div class="contract_num"><span>AUO PO NO.1234</span></div>
+                                <div class="type"><span>一般</span></div>
+                                <div class="contract_form">
+                                    <div class="title">合約編號</div>
+                                    <div class="form_content">
+                                        <span class="blue">100-000-001</span>
+                                    </div>
+                                    <div class="title">地區 / 國家</div>
+                                    <div class="form_content">
+                                        <div class="aurora-tag">
+                                            <ul>
+                                                <li>
+                                                    <span>北美洲</span> /
+                                                    <span>美國全區</span>
+                                                </li>
+                                                <li><span>亞洲</span> / <span>台灣</span></li>
+                                                <li>
+                                                    <span>歐洲</span> /<span>英國、法國全區</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="title">客戶名稱</div>
+                                    <div class="form_content"><span>富邦銀行-台北分行</span></div>
+                                    <div class="title">組織架構</div>
+                                    <div class="form_content"><span>富邦銀行</span></div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理附約</span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                        <img src="images/icon/i_edit.svg" alt="" />
+                                        <span>管理場址</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("#header").load("components/header/header.html");
+            $("#nav").load("components/nav/nav.html");
+        </script>
+    </body>
+</html>

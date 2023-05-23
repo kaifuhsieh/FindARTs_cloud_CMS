@@ -1,0 +1,25 @@
+// more 設定
+.more_block {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5em;
+    a.more {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 5em;
+        background-color: #ddd;
+        border-radius: 0.25em;
+        text-align: center;
+        line-height: 2em;
+        margin: 0 0 0 auto;
+        font-size: 0.75em;
+        padding: 0 1em;
+        text-decoration: none;
+        color: #888;
+        &:hover,
+        &:focus {
+            background-color: $aHover;
+            color: #fff;
+        }
+    }
+}

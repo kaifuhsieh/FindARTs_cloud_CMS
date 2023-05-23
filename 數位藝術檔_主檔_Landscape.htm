@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>數位藝術畫</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- main -->
+
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="quickSearch forLicense">
+                            <div class="license_info">
+                                <div class="item">
+                                    <div class="title">Digital Art ID</div>
+                                    <div class="content">
+                                        <input type="text" value="系統產生Y1234567890" readonly />
+                                    </div>
+                                    <div class="title">授權組織</div>
+                                    <div class="content">陳澄波文化基金會</div>
+                                    <div class="title">對方典藏ID</div>
+                                    <div class="content">
+                                        <input type="text" value="" />
+                                    </div>
+                                    <div class="title">授權起訖日</div>
+                                    <div class="content"><time>2021/11/20</time> - <time>2024/12/31</time></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3_title">基本資料</h3>
+                        <div class="gridBlock">
+                            <p class="info">
+                                <img src="images/icon/i_information.svg" alt="" />Fill all information below區塊說明
+                            </p>
+                            <button type="button" class="btn btn-preview">
+                                <img src="images/preview.svg" alt="" />
+                            </button>
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作名稱-中文<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" value="" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">著作名稱-英文</div>
+                                    <div class="form_content">
+                                        <input
+                                            type="text"
+                                            value="Danshui golf course Danshui golf course Danshui golf course"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作人名稱-中文<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" value="亞力克斯 ‧ 約瑟夫 ‧ 佩里涅昂" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">著作人名稱-英文</div>
+                                    <div class="form_content">
+                                        <input type="text" value="Alexis Joseph PÉRIGNON." />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作人年代<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" value="荷蘭" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作人國籍<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" value="荷蘭" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        創作年代<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" value="荷蘭" />
+                                        <p class="info">
+                                            <img src="images/icon/i_information.svg" alt="" />欄位說明-例如請輸入西元年
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作類別<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <select name="" id="">
+                                            <option value="油畫">油畫</option>
+                                            <option value="其他類別">其他類別</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作全尺寸<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" value="66.8 x 100.5 x 4 cm" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        說明牌中文內容<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="10">
+〈再見，狐狸-18〉是攝影師鄧博仁的系列作品之一。透過一連串與學生的對話互動，他以鏡頭捕捉了當代年輕人的樣貌，並藉此回溯自己的回憶</textarea
+                                        >
+                                        <p class="info"><img src="images/icon/i_information.svg" alt="" />限xxxx字元</p>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        說明牌英文內容<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="10">
+Farewell to the Fox – 15 is one of a series of works by photographer Teng Po-Jen. When interacting with students, he found that his own past was very different from that of young people today, so he began to trace his own memories by photograph.</textarea
+                                        >
+                                        <p class="info"><img src="images/icon/i_information.svg" alt="" />限xxxx字元</p>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        上傳縮圖<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="uploadFile dropzone">
+                                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                <div class="dz-default dz-message">
+                                                    <button class="dz-button" type="button">
+                                                        <img src="images/icon/i_upload.svg" alt="" />
+                                                        Drop files here or click to upload
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        $('.uploadFile').dropzone({ url: '/file/post' });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3_title">著作設定</h3>
+                        <div class="gridBlock">
+                            <p class="info">
+                                <img src="images/icon/i_information.svg" alt="" />Fill all information below區塊說明
+                            </p>
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作呈現形式<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="radio_grp">
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio"
+                                                    value=""
+                                                    checked=""
+                                                />橫式(H)</label
+                                            >
+                                            <label><input type="radio" name="sampleradio" value="" />直式(V)</label>
+                                            <label><input type="radio" name="sampleradio" value="" />方形(S)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">著作名稱-英文</div>
+                                    <div class="form_content">
+                                        <input type="text" value="鄉村系列" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">關鍵字</div>
+                                    <div class="form_content">
+                                        <link rel="stylesheet" href="vendor/tagify/tagify.css" />
+                                        <script src="vendor/tagify/tagify.min.js"></script>
+                                        <script src="vendor/tagify/tagify.polyfills.min.js"></script>
+                                        <input name="basic" value="抽象, 高爾夫球場" />
+                                        <script>
+                                            // The DOM element you wish to replace with Tagify
+                                            var input = document.querySelector('input[name=basic]');
+
+                                            // initialize Tagify on the above input node reference
+                                            new Tagify(input);
+                                        </script>
+                                        <p class="info">
+                                            <img
+                                                src="images/icon/i_information.svg"
+                                                alt=""
+                                            />欄位說明-請輸入著作風格等相關關鍵字
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">收藏備註</div>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="10">私人收藏</textarea>
+                                        <p class="info"><img src="images/icon/i_information.svg" alt="" />限xxxx字元</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h3_title">啟用設定</h3>
+                        <div class="gridBlock">
+                            <p class="info">
+                                <img src="images/icon/i_information.svg" alt="" />Fill all information below區塊說明
+                            </p>
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        啟用<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="radio_grp">
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio2"
+                                                    value=""
+                                                    checked=""
+                                                />啟用</label
+                                            >
+                                            <label><input type="radio" name="sampleradio2" value="" />不啟用</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-reset">取消</button>
+                            <button type="button" class="btn">暫存</button>
+                            <button type="button" class="btn btn-submit">儲存，上傳圖檔</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preview -->
+        <div class="preview">
+            <a href="#" class="close">
+                <img src="images/icon/i_close.svg" alt="" />
+            </a>
+            <button type="button" class="btn btn-rotate">
+                <img src="images/icon/i_rotate.svg" alt="" />
+            </button>
+            <div class="board_frame">
+                <iframe src="intro_board/basic_01.html" frameborder="0"></iframe>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $('.btn-preview')
+                    .off()
+                    .click(function (e) {
+                        $('.preview').stop().addClass('open');
+                        e.preventDefault();
+                    });
+                $('.preview')
+                    .find('a.close')
+                    .off()
+                    .click(function (e) {
+                        $('.preview').stop().removeClass('open');
+                        e.preventDefault();
+                    });
+                $('.btn-rotate')
+                    .off()
+                    .click(function (e) {
+                        $('.board_frame').toggleClass('rotate');
+                        e.preventDefault();
+                    });
+            });
+        </script>
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

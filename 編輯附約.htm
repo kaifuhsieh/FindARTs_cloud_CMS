@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>附約管理LP</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <div class="form_grp forText">
+                        <input type="text" value="" placeholder="請輸入年度合約編號等關鍵字" />
+                    </div>
+                    <div class="form_grp forSelect">
+                        <select name="" id="">
+                            <option value="">全部欄位</option>
+                            <option value="">其他欄位</option>
+                        </select>
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="searchBtn btn-primary">
+                            <img src="images/icon/i_search.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <!-- controlPanel -->
+                <div class="controlPanel">
+                    <button type="button" class="btn-delete btn-red">
+                        <img src="images/icon/i_trash.svg" alt="" />刪除
+                    </button>
+                    <button type="button" class="btn-add btn-green">
+                        <img src="images/icon/i_plus.svg" alt="" />新增
+                    </button>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <!-- 表格樣式 -->
+                            <div class="table_wrapper">
+                                <table class="table_hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" /></th>
+                                            <th></th>
+                                            <th>
+                                                <a href="#"
+                                                    >年度合約編號<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+                                            <th class="main_data">
+                                                <a href="#"
+                                                    >年度合約起訖<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+                                            <th>
+                                                <a href="#"
+                                                    >發票號碼<img
+                                                        src="images/icon/i_sort.svg"
+                                                        alt=""
+                                                /></a>
+                                            </th>
+                                            <th>
+                                                <a href="#"
+                                                    >狀態<img src="images/icon/i_sort.svg" alt=""
+                                                /></a>
+                                            </th>
+                                            <th>動作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">1</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="gray">結案</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-gray"
+                                                            data-fancybox
+                                                            data-src="#hidden-content"
+                                                            data-options='{"touch" : false}'
+                                                            href="javascript:;"
+                                                        >
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                    <!-- fancybox -->
+                                                    <div
+                                                        class="fancyLightBox"
+                                                        style="display: none"
+                                                        id="hidden-content"
+                                                    >
+                                                        <h2><span>編修年度附約</span></h2>
+                                                        <div class="form_grid">
+                                                            <div class="form_grp">
+                                                                <div class="field_name">
+                                                                    年度合約編號<abbr
+                                                                        class="necessary"
+                                                                        title="為必填(選)欄位,不能為空白。"
+                                                                        >*</abbr
+                                                                    >
+                                                                </div>
+                                                                <div class="form_content">
+                                                                    <input
+                                                                        type="text"
+                                                                        id=""
+                                                                        value="1234-000-001"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="field_name">
+                                                                    授權起迄日<abbr
+                                                                        class="necessary"
+                                                                        title="為必填(選)欄位,不能為空白。"
+                                                                        >*</abbr
+                                                                    >
+                                                                </div>
+                                                                <div class="form_content">
+                                                                    <div class="datepick">
+                                                                        <input
+                                                                            name=""
+                                                                            type="text"
+                                                                            value=""
+                                                                            class="calendar"
+                                                                            placeholder="開始日期"
+                                                                        />
+                                                                        <img
+                                                                            src="images/icon/i_calendar.svg"
+                                                                            alt=""
+                                                                        />
+                                                                    </div>
+                                                                    <div class="datepick">
+                                                                        <input
+                                                                            name=""
+                                                                            type="text"
+                                                                            value=""
+                                                                            class="calendar"
+                                                                            placeholder="結束日期"
+                                                                        />
+                                                                        <img
+                                                                            src="images/icon/i_calendar.svg"
+                                                                            alt=""
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_grp">
+                                                                <div class="field_name">
+                                                                    發票號碼
+                                                                </div>
+                                                                <div class="form_content">
+                                                                    <input
+                                                                        type="text"
+                                                                        id=""
+                                                                        value=""
+                                                                    />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form_grp">
+                                                                <div class="field_name">
+                                                                    附件上傳<abbr
+                                                                        class="necessary"
+                                                                        title="為必填(選)欄位,不能為空白。"
+                                                                        >*</abbr
+                                                                    >
+                                                                </div>
+                                                                <div class="form_content">
+                                                                    <div
+                                                                        class="uploadFile dropzone"
+                                                                    >
+                                                                        <form
+                                                                            action="/file-upload"
+                                                                            class="dropzone"
+                                                                            id="my-awesome-dropzone"
+                                                                        >
+                                                                            <div
+                                                                                class="dz-default dz-message"
+                                                                            >
+                                                                                <button
+                                                                                    class="dz-button"
+                                                                                    type="button"
+                                                                                >
+                                                                                    <img
+                                                                                        src="images/icon/i_upload.svg"
+                                                                                        alt=""
+                                                                                    />
+                                                                                    Drop files here
+                                                                                    or click to
+                                                                                    upload
+                                                                                </button>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="uploadFileList">
+                                                                        <ul>
+                                                                            <li>
+                                                                                2022春季系列授權書.pdf
+                                                                            </li>
+                                                                            <li>合作備忘錄.pdf</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <script src="vendor/dropzone/dropzone.js"></script>
+                                                                <script>
+                                                                    $(".uploadFile").dropzone({
+                                                                        url: "/file/post",
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_grp">
+                                                            <button
+                                                                type="button"
+                                                                class="btn btn-submit"
+                                                            >
+                                                                儲存
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                class="btn btn-reset"
+                                                            >
+                                                                取消
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">2</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="green">未開始</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">3</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="orange">進行中</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">4</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="gray">結案</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">5</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="green">未開始</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">6</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="orange">進行中</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">7</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="gray">結案</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">8</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="gray">結案</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">9</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="gray">結案</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">10</td>
+                                            <td><a href="#">1234-000-001</a></td>
+                                            <td><time>2022/01/01</time>~<time>2022/12/31</time></td>
+                                            <td>QS12345678</td>
+                                            <td><span class="gray">結案</span></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img
+                                                            src="images/icon/i_arrow_down.svg"
+                                                            alt=""
+                                                        />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />編輯
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />續約
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img
+                                                                src="images/icon/i_edit.svg"
+                                                                alt=""
+                                                            />管理場址
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("#header").load("components/header/header.html");
+            $("#nav").load("components/nav/nav.html");
+        </script>
+    </body>
+</html>

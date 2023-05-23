@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>裝置管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <h3 class="searchTitle">場址資訊</h3>
+                    <div class="license_info">
+                        <div class="item">
+                            <div class="title">場址編號</div>
+                            <div class="content">123456-001</div>
+                            <div class="title">DFSI</div>
+                            <div class="content">創立空間</div>
+                        </div>
+                        <div class="item">
+                            <div class="title">場址期限</div>
+                            <div class="content"><time>2022/1/1</time>~<time>2022/12/31</time></div>
+                            <div class="title">場域地區</div>
+                            <div class="content">亞洲 / 台灣</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controlPanel">
+                    <h3 class="h3_title">裝置規格</h3>
+                    <!-- controlPanel -->
+                    <button
+                        type="button"
+                        class="btn-add btn-green"
+                        data-fancybox
+                        data-src="#hidden-content"
+                        data-options='{"touch" : false}'
+                        href="javascript:;"
+                    >
+                        <img src="images/icon/i_plus.svg" alt="" />新增裝置
+                    </button>
+                </div>
+                <!-- fancybox -->
+                <div class="fancyLightBox" style="display: none" id="hidden-content">
+                    <h2><span>新增裝置</span></h2>
+                    <div class="form_grid">
+                        <div class="form_grp">
+                            <div class="field_name">預設編號</div>
+                            <div class="form_content">
+                                <input type="text" id="" value="1234-000-001" />- ***
+                                <p class="info"><img src="images/icon/i_information.svg" alt="" />限輸入英數及符號</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form_grp">
+                            <div class="field_name">裝置規格</div>
+                            <div class="form_content spec">
+                                <select>
+                                    <option value="32吋-2K4K(H)">32吋-2K4K(H)</option>
+                                    <option value="32吋-2K4K(H)">32吋-2K4K(H)</option>
+                                    <option value="32吋-2K4K(H)">32吋-2K4K(H)</option>
+                                    <option value="32吋-2K4K(H)">32吋-2K4K(H)</option>
+                                </select>
+                                <input type="text" value="" />台
+                                <button type="button" class="btn btn-primary">新增裝置</button>
+                                <ol>
+                                    <li>32吋-2K4K(H)<span>30</span>台</li>
+                                    <li>85吋-8K4K<span>10</span>台</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="form_grp">
+                            <div class="field_name">預設連線天數</div>
+                            <div class="form_content"><input type="text" value="" />天</div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="field_name">預設擺放位置</div>
+                            <div class="form_content">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="btn btn-reset">取消</button>
+                        <button type="button" class="btn btn-submit">儲存</button>
+                    </div>
+                </div>
+                <div class="aurora-tag">
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">17吋-2K2K</a></li>
+                        <li><a href="#">32吋-2K4K(H)</a></li>
+                        <li><a href="#">32吋-2K4K(V)</a></li>
+                        <li><a href="#">85吋-8K4K</a></li>
+                        <li><a href="#">75吋-8K4K</a></li>
+                    </ul>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <!-- 裝置list -->
+                        <div class="equipment_list">
+                            <ul>
+                                <li>
+                                    <div class="equipment_info">
+                                        <div class="equip_title">
+                                            <h4>
+                                                <img src="images/icon/i_computer.svg" alt="" />
+                                                Device 編號
+                                            </h4>
+                                            <div class="num">CM-01-8F-001</div>
+                                            <div class="btn_grp">
+                                                <button
+                                                    type="button"
+                                                    class="btn"
+                                                    data-fancybox
+                                                    data-src="#hidden-content2"
+                                                    data-options='{"touch" : false}'
+                                                    href="javascript:;"
+                                                >
+                                                    <img src="images/icon/i_edit.svg" alt="" />
+                                                    編輯
+                                                </button>
+                                                <button type="button" class="btn">
+                                                    <img src="images/icon/i_menu.svg" alt="" />
+                                                    管理排程
+                                                </button>
+                                            </div>
+                                            <!-- fancybox -->
+                                            <div class="fancyLightBox" style="display: none" id="hidden-content2">
+                                                <h2><span>編修裝置</span></h2>
+                                                <div class="equip">
+                                                    <ul>
+                                                        <li class="bold"><span>TureCode</span>1234567890QWERY</li>
+                                                        <li><span>Series ID</span>1234567890QWERY</li>
+                                                        <li><span>MAC ID</span>1234567890QWERY</li>
+                                                        <li><span>最後異動時間</span>022/01/18 14:00:00</li>
+                                                    </ul>
+                                                </div>
+                                                <hr />
+                                                <div class="form_grid">
+                                                    <div class="form_grp">
+                                                        <div class="field_name">預設編號</div>
+                                                        <div class="form_content">CM-01-8F-***</div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="field_name">裝置規格</div>
+                                                        <div class="form_content spec">32吋-2K4K(H)</div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="field_name">預設連線天數</div>
+                                                        <div class="form_content"><input type="text" value="" />天</div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="field_name">預設擺放位置</div>
+                                                        <div class="form_content">
+                                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_grp">
+                                                        <div class="field_name">
+                                                            裝置啟用<abbr
+                                                                class="necessary"
+                                                                title="為必填(選)欄位,不能為空白。"
+                                                                >*</abbr
+                                                            >
+                                                        </div>
+                                                        <div class="form_content">
+                                                            <div class="radio_grp">
+                                                                <label
+                                                                    ><input
+                                                                        type="radio"
+                                                                        name="sampleradio"
+                                                                        value=""
+                                                                        checked=""
+                                                                    />啟用</label
+                                                                >
+                                                                <label
+                                                                    ><input
+                                                                        type="radio"
+                                                                        name="sampleradio"
+                                                                        value=""
+                                                                    />不啟用</label
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btn_grp">
+                                                    <button type="button" class="btn btn-reset">取消</button>
+                                                    <button type="button" class="btn btn-submit">儲存</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Device 規格</div>
+                                            <div class="content">32吋-2K4K(V)</div>
+                                            <div class="title">MAC ID</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">連線天數</div>
+                                            <div class="content">30/天</div>
+                                            <div class="title">裝置啟動碼</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">圖庫圖片</div>
+                                            <div class="content">30張</div>
+                                            <div class="title">Series No.</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">擺放位置</div>
+                                            <div class="content">大廳中央背牆</div>
+                                            <div class="title">最後連線時間</div>
+                                            <div class="content"><time>2022/03/22</time></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="equipment_info">
+                                        <div class="equip_title">
+                                            <h4>
+                                                <img src="images/icon/i_computer.svg" alt="" />
+                                                Device 編號
+                                            </h4>
+                                            <div class="num">CM-01-8F-001</div>
+                                            <div class="btn_grp">
+                                                <button type="button" class="btn">
+                                                    <img src="images/icon/i_edit.svg" alt="" />
+                                                    編輯
+                                                </button>
+                                                <button type="button" class="btn">
+                                                    <img src="images/icon/i_menu.svg" alt="" />
+                                                    管理排程
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Device 規格</div>
+                                            <div class="content">32吋-2K4K(V)</div>
+                                            <div class="title">MAC ID</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">連線天數</div>
+                                            <div class="content">30/天</div>
+                                            <div class="title">裝置啟動碼</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">圖庫圖片</div>
+                                            <div class="content">30張</div>
+                                            <div class="title">Series No.</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">擺放位置</div>
+                                            <div class="content">大廳中央背牆</div>
+                                            <div class="title">最後連線時間</div>
+                                            <div class="content"><time>2022/03/22</time></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="equipment_info">
+                                        <div class="equip_title">
+                                            <h4>
+                                                <img src="images/icon/i_computer.svg" alt="" />
+                                                Device 編號
+                                            </h4>
+                                            <div class="num">CM-01-8F-001</div>
+                                            <div class="btn_grp">
+                                                <button type="button" class="btn">
+                                                    <img src="images/icon/i_edit.svg" alt="" />
+                                                    編輯
+                                                </button>
+                                                <button type="button" class="btn">
+                                                    <img src="images/icon/i_menu.svg" alt="" />
+                                                    管理排程
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="title">Device 規格</div>
+                                            <div class="content">32吋-2K4K(V)</div>
+                                            <div class="title">MAC ID</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">連線天數</div>
+                                            <div class="content">30/天</div>
+                                            <div class="title">裝置啟動碼</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">圖庫圖片</div>
+                                            <div class="content">30張</div>
+                                            <div class="title">Series No.</div>
+                                            <div class="content">1234567890asdfg123</div>
+                                            <div class="title">擺放位置</div>
+                                            <div class="content">大廳中央背牆</div>
+                                            <div class="title">最後連線時間</div>
+                                            <div class="content"><time>2022/03/22</time></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

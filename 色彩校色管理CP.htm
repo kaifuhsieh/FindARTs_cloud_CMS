@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>色彩校色管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <!-- 右側表單 -->
+                            <p class="info">
+                                <img src="images/icon/i_information.svg" alt="" /> Fill all information below區塊說明
+                            </p>
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        硬體序號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" text="" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        Series No.<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" text="" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        著作類別<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <select name="" id="">
+                                            <option value="油畫">油畫</option>
+                                            <option value="其他類別">其他類別</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">備註</div>
+                                    <div class="form_content">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        <p class="info">
+                                            <img src="images/icon/i_information.svg" alt="" /> 限xxxx字元
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        上傳色校檔案<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="uploadFile dropzone">
+                                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                <div class="dz-default dz-message">
+                                                    <button class="dz-button" type="button">
+                                                        <img src="images/icon/i_upload.svg" alt="" />
+                                                        Drop files here or click to upload
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="uploadFileList">
+                                            <ul>
+                                                <li>2022春季系列授權書 .zip</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        $('.uploadFile').dropzone({ url: '/file/post' });
+                                    </script>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        硬體序號與Series No.對照表<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="uploadFile dropzone">
+                                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                <div class="dz-default dz-message">
+                                                    <button class="dz-button" type="button">
+                                                        <img src="images/icon/i_upload.svg" alt="" />
+                                                        Drop files here or click to upload
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="uploadFileList">
+                                            <ul>
+                                                <li>2022春季系列授權書 .xls</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <script src="vendor/dropzone/dropzone.js"></script>
+                                    <script>
+                                        $('.uploadFile').dropzone({ url: '/file/post' });
+                                    </script>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn btn-submit">儲存</button>
+                                    <button type="button" class="btn btn-reset">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

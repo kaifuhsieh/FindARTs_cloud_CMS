@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>畫作挑選</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <!-- quickSearch -->
+                        <div class="quickSearch forLicense">
+                            <div class="form_grp forText">
+                                <input type="text" value="" placeholder="請輸入圖檔名稱、著作人名稱等查詢關鍵字" />
+                            </div>
+                            <div class="form_grp forSelect">
+                                <select name="" id="">
+                                    <option value="">全部欄位</option>
+                                    <option value="">其他欄位</option>
+                                </select>
+                            </div>
+                            <div class="btn_grp">
+                                <button type="button" class="searchBtn btn-primary">
+                                    <img src="images/icon/i_search.svg" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                        <!-- filterPanel -->
+                        <div class="filterPanel">
+                            <h3>篩選條件</h3>
+                            <div class="form_grp">
+                                <div class="field_name">作品類別</div>
+                                <div class="form_content">
+                                    <select name="" id="">
+                                        <option value="全部">全部</option>
+                                        <option value="其他">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="field_name">系列著作</div>
+                                <div class="form_content">
+                                    <select name="" id="">
+                                        <option value="全部">全部</option>
+                                        <option value="其他">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <div class="field_name">圖檔類型</div>
+                                <div class="form_content">
+                                    <select name="" id="">
+                                        <option value="全部">全部</option>
+                                        <option value="其他">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 已挑選 -->
+                        <div class="picked">
+                            <!-- dropdown -->
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dropdown">
+                                    <img src="images/icon/i_heart.svg" alt="" />
+                                    已選取<span class="bold">30</span>張
+                                </button>
+                                <div class="dropdown-content">
+                                    <div class="picked_list">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/vermeer.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <div class="picCaption">
+                                                    <h3>米開朗基羅</h3>
+                                                    <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                                    <a href="#" class="btn-delete">
+                                                        <img src="images/icon/i_trash.svg" alt="" />
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/vermeer.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <div class="picCaption">
+                                                    <h3>米開朗基羅</h3>
+                                                    <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                                    <a href="#" class="btn-delete">
+                                                        <img src="images/icon/i_trash.svg" alt="" />
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/vermeer.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <div class="picCaption">
+                                                    <h3>米開朗基羅</h3>
+                                                    <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                                    <a href="#" class="btn-delete">
+                                                        <img src="images/icon/i_trash.svg" alt="" />
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/vermeer.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <div class="picCaption">
+                                                    <h3>米開朗基羅</h3>
+                                                    <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                                    <a href="#" class="btn-delete">
+                                                        <img src="images/icon/i_trash.svg" alt="" />
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn btn-primary">檢視全部圖片</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main -->
+                        <div class="flex-12">
+                            <div class="col">
+                                <!-- List -->
+                                <div class="picList">
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/rembrandt.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>米開朗基羅</h3>
+                                            <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>陳澄波山水畫</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/vermeer.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto enim
+                                                impedit sapiente eveniet, illo doloremque cumque, placeat quasi alias
+                                                dolorem, aperiam sit vero! Placeat officia magnam sunt quae autem ullam!
+                                            </h3>
+                                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>Lorem ipsum dolor sit amet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn collected">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/picasso.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>米開朗基羅</h3>
+                                            <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>陳澄波山水畫</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn collected">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/rembrandt.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>米開朗基羅</h3>
+                                            <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>陳澄波山水畫</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn collected">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/vermeer.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto enim
+                                                impedit sapiente eveniet, illo doloremque cumque, placeat quasi alias
+                                                dolorem, aperiam sit vero! Placeat officia magnam sunt quae autem ullam!
+                                            </h3>
+                                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>Lorem ipsum dolor sit amet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/picasso.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>米開朗基羅</h3>
+                                            <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>陳澄波山水畫</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/rembrandt.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>米開朗基羅</h3>
+                                            <h4>Michelangelo Di lodovico BuonarrSim</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>陳澄波山水畫</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-container">
+                                            <img src="images/vermeer.jpg" alt="" />
+                                        </div>
+                                        <div class="picCaption">
+                                            <h3>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto enim
+                                                impedit sapiente eveniet, illo doloremque cumque, placeat quasi alias
+                                                dolorem, aperiam sit vero! Placeat officia magnam sunt quae autem ullam!
+                                            </h3>
+                                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+                                            <ul>
+                                                <li><span>作品類別</span>山水畫</li>
+                                                <li><span>系列著作</span>Lorem ipsum dolor sit amet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collect">
+                                            <button type="button" class="btn">
+                                                <img src="images/icon/i_heart.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 頁碼 -->
+                                <div class="pagination">
+                                    <ul class="page">
+                                        <li class="first">
+                                            <a href="#" title="第一頁">第一頁 </a>
+                                        </li>
+                                        <li class="prev">
+                                            <a href="#" title="回上一頁">回上一頁 </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">...</a></li>
+                                        <li><a href="#">8</a></li>
+                                        <li><a href="#">9</a></li>
+                                        <li><a href="#">10</a></li>
+                                        <li class="next">
+                                            <a href="#" title="下一頁">下一頁 </a>
+                                        </li>
+                                        <li class="last">
+                                            <a href="#" title="最後一頁">最後一頁 </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn_grp">
+                                    <button type="button" class="btn btn-submit">儲存</button>
+                                    <button type="button" class="btn btn-reset">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>授權管理</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <div class="form_grp forText">
+                        <input type="text" value="" placeholder="請輸入授權名稱、授權組織等查詢關鍵字" />
+                    </div>
+                    <div class="form_grp forSelect">
+                        <select name="" id="">
+                            <option value="">全部欄位</option>
+                            <option value="">其他欄位</option>
+                        </select>
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="searchBtn btn-primary">
+                            <img src="images/icon/i_search.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <!-- controlPanel -->
+                <div class="controlPanel">
+                    <button type="button" class="btn-delete btn-red">
+                        <img src="images/icon/i_trash.svg" alt="" />刪除
+                    </button>
+                    <button type="button" class="btn-add btn-green">
+                        <img src="images/icon/i_plus.svg" alt="" />新增
+                    </button>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <!-- 表格樣式 -->
+                            <div class="table_wrapper">
+                                <table class="table_hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" /></th>
+                                            <th>
+                                                <a href="#">序號<img src="images/icon/i_sort.svg" alt="" /></a>
+                                            </th>
+                                            <th></th>
+                                            <th class="main_data">
+                                                <a href="#">授權書名稱<img src="images/icon/i_sort.svg" alt="" /></a>
+                                            </th>
+                                            <th class="text-left">
+                                                <a href="#">授權組織<img src="images/icon/i_sort.svg" alt="" /></a>
+                                            </th>
+                                            <th>
+                                                <a href="#"
+                                                    >最新授權起訖日<img src="images/icon/i_sort.svg" alt=""
+                                                /></a>
+                                            </th>
+                                            <th>動作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">1</td>
+                                            <td>Y1234567890</td>
+                                            <td class="main_data">
+                                                <a href="#">陳澄波山水畫展</a>
+                                            </td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />授權條件
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">2</td>
+                                            <td>Y1234567890</td>
+                                            <td class="main_data">
+                                                <a href="#">陳澄波山水畫展</a>
+                                            </td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />授權條件
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">3</td>
+                                            <td>Y1234567890</td>
+                                            <td class="main_data">
+                                                <a href="#">陳澄波山水畫展</a>
+                                            </td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />授權條件
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">4</td>
+                                            <td>Y1234567890</td>
+                                            <td class="main_data">
+                                                <a href="#">陳澄波山水畫展</a>
+                                            </td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />授權條件
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">5</td>
+                                            <td>Y1234567890</td>
+                                            <td class="main_data">
+                                                <a href="#">陳澄波山水畫展</a>
+                                            </td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />授權條件
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <h3 class="searchTitle">授權主要資訊</h3>
+                    <div class="form_grp forText">
+                        <label for="">授權書名稱</label>
+                        <input type="text" value="" placeholder="請輸入授權書名稱關鍵字" />
+                    </div>
+                    <div class="form_grp forText">
+                        <label for="">授權組織</label>
+                        <input type="text" value="" placeholder="請輸入授權組織關鍵字" />
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="searchBtn btn-primary">
+                            <img src="images/icon/i_search.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <!-- main -->
+                <h3 class="h3_title">授權條件歷程</h3>
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <div class="license_block">
+                                <!-- 左側編號 -->
+                                <div class="num_info">
+                                    <div class="num">1</div>
+                                    <a href="#" class="btn-alert">
+                                        <img src="images/icon/i_alert_color.svg" alt="" />
+                                    </a>
+                                </div>
+                                <!-- 右側表單 -->
+                                <div class="form_grid">
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            授權屬性<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                        </div>
+                                        <div class="form_content">
+                                            <select name="" id="">
+                                                <option value="Display 圖檔格式">Display 圖檔格式</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            授權起迄日<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                                                >*</abbr
+                                            >
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="datepick">
+                                                <input
+                                                    name=""
+                                                    type="text"
+                                                    value=""
+                                                    class="calendar"
+                                                    placeholder="開始日期"
+                                                />
+                                                <img src="images/icon/i_calendar.svg" alt="" />
+                                            </div>
+                                            <div class="datepick">
+                                                <input
+                                                    name=""
+                                                    type="text"
+                                                    value=""
+                                                    class="calendar"
+                                                    placeholder="結束日期"
+                                                />
+                                                <img src="images/icon/i_calendar.svg" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權使用區域</div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="" />
+                                            <button type="button" class="btn btn-primary">選取區域</button>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權使用者</div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權事件</div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            授權模式<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="radio_grp">
+                                                <label
+                                                    ><input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                        checked
+                                                    />無償授權</label
+                                                >
+                                                <label
+                                                    ><input type="radio" name="sampleradio" value="" />總量點數制</label
+                                                >
+                                                <label
+                                                    ><input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                    />依圖檔使用張次計價</label
+                                                >
+                                                <label
+                                                    ><input
+                                                        type="radio"
+                                                        name="sampleradio"
+                                                        value=""
+                                                    />依分潤比例計費</label
+                                                >
+                                                <hr />
+                                                <label> <input type="radio" name="sampleradio" value="" />其他</label>
+                                                <div class="other_option">
+                                                    <ul>
+                                                        <li>數位轉檔<input type="text" text="" />%</li>
+                                                        <li>數位上架<input type="text" text="" />%</li>
+                                                        <li>數位下載<input type="text" text="" />%</li>
+                                                        <li>數位播放 <input type="text" text="" />%</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">授權Logo圖</div>
+                                        <div class="form_content">
+                                            <div class="uploadFile dropzone">
+                                                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                    <div class="dz-default dz-message">
+                                                        <button class="dz-button" type="button">
+                                                            <img src="images/icon/i_upload.svg" alt="" />
+                                                            Drop files here or click to upload
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            $('.uploadFile').dropzone({ url: '/file/post' });
+                                        </script>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            附件上傳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="uploadFile dropzone">
+                                                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                    <div class="dz-default dz-message">
+                                                        <button class="dz-button" type="button">
+                                                            <img src="images/icon/i_upload.svg" alt="" />
+                                                            Drop files here or click to upload
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="uploadFileList">
+                                                <ul>
+                                                    <li>2022春季系列授權書.pdf</li>
+                                                    <li>合作備忘錄.pdf</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <script src="vendor/dropzone/dropzone.js"></script>
+                                        <script>
+                                            $('.uploadFile').dropzone({ url: '/file/post' });
+                                        </script>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-submit">儲存</button>
+                                        <button type="button" class="btn btn-reset">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

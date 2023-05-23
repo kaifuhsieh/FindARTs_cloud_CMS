@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>數位藝術畫</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- quickSearch -->
+                <div class="quickSearch forLicense">
+                    <div class="form_grp forText">
+                        <input type="text" value="" placeholder="請輸入排程時間等關鍵字" />
+                    </div>
+                    <div class="form_grp forSelect">
+                        <select name="" id="">
+                            <option value="">預設模式</option>
+                            <option value="">淡出模式</option>
+                        </select>
+                    </div>
+                    <div class="btn_grp">
+                        <button type="button" class="searchBtn btn-primary">
+                            <img src="images/icon/i_search.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <!-- filterPanel -->
+                <div class="filterPanel">
+                    <h3>篩選條件</h3>
+                    <div class="form_grp">
+                        <div class="field_name">狀態</div>
+                        <div class="form_content">
+                            <select name="" id="">
+                                <option value="全部">全部</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="field_name">作品類別</div>
+                        <div class="form_content">
+                            <select name="" id="">
+                                <option value="全部">全部</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <div class="field_name">系列著作</div>
+                        <div class="form_content">
+                            <select name="" id="">
+                                <option value="全部">全部</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- controlPanel -->
+                <div class="controlPanel">
+                    <button type="button" class="btn-delete btn-red">
+                        <img src="images/icon/i_trash.svg" alt="" />刪除
+                    </button>
+                    <button type="button" class="btn-active btn-blue">
+                        <img src="images/icon/i_check.svg" alt="" />啟用
+                    </button>
+                    <button type="button" class="btn-export btn-blue">
+                        <img src="images/icon/i_export.svg" alt="" />匯出
+                    </button>
+                    <button type="button" class="btn-add btn-green">
+                        <img src="images/icon/i_plus.svg" alt="" />新增
+                    </button>
+                    <button type="button" class="btn-import btn-green">
+                        <img src="images/icon/i_import.svg" alt="" />匯入
+                    </button>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <!-- 表格樣式 -->
+                            <div class="table_wrapper">
+                                <table class="table_hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" /></th>
+                                            <th>序號</th>
+                                            <th>ID</th>
+                                            <th>著作資訊</th>
+                                            <th>著作人名稱</th>
+                                            <th>授權組織</th>
+                                            <th>授權起訖日</th>
+                                            <th>啟用</th>
+                                            <th>動作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">1</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/picasso.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">淡水高爾夫球場</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Landscape</li>
+                                                    <li>創作年代 : 19世紀</li>
+                                                    <li>作品類別 : 山水畫</li>
+                                                    <li>系列著作 : 陳澄波山水畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">2</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/rembrandt.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Square</li>
+                                                    <li>創作年代 : 1980年代</li>
+                                                    <li>作品類別 : 油畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">3</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/picasso.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Landscape</li>
+                                                    <li>創作年代 : 19世紀</li>
+                                                    <li>作品類別 : 山水畫</li>
+                                                    <li>系列著作 : 陳澄波山水畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">4</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/rembrandt.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#"> 之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Square</li>
+                                                    <li>創作年代 : 1980年代</li>
+                                                    <li>作品類別 : 油畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="red">尚未啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">5</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/picasso.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Landscape</li>
+                                                    <li>創作年代 : 19世紀</li>
+                                                    <li>作品類別 : 山水畫</li>
+                                                    <li>系列著作 : 陳澄波山水畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">6</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/rembrandt.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#"> 之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Square</li>
+                                                    <li>創作年代 : 1980年代</li>
+                                                    <li>作品類別 : 油畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="red">尚未啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">7</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/picasso.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Landscape</li>
+                                                    <li>創作年代 : 19世紀</li>
+                                                    <li>作品類別 : 山水畫</li>
+                                                    <li>系列著作 : 陳澄波山水畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">8</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/rembrandt.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#"> 之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Square</li>
+                                                    <li>創作年代 : 1980年代</li>
+                                                    <li>作品類別 : 油畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">9</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/picasso.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Landscape</li>
+                                                    <li>創作年代 : 19世紀</li>
+                                                    <li>作品類別 : 山水畫</li>
+                                                    <li>系列著作 : 陳澄波山水畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hasInput"><input type="checkbox" /></td>
+                                            <td class="num">10</td>
+                                            <td>
+                                                Y1234567890
+                                                <a href="#">
+                                                    <div class="img-container">
+                                                        <img src="images/rembrandt.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#"> 之間：芒草叢．鳳林</a>
+                                                <ul class="meta">
+                                                    <li>著作呈現樣式 : Square</li>
+                                                    <li>創作年代 : 1980年代</li>
+                                                    <li>作品類別 : 油畫</li>
+                                                </ul>
+                                            </td>
+                                            <td>陳澄波 ChenChengpo</td>
+                                            <td>陳澄波文化基金會</td>
+                                            <td><time>2022/01/01</time>-<time>2022/12/31</time></td>
+                                            <td>
+                                                <span class="green">啟用</span>
+                                            </td>
+                                            <td>
+                                                <!-- dropdown -->
+                                                <div class="dropdown">
+                                                    <button class="btn btn-dropdown">
+                                                        <img src="images/icon/i_arrow_down.svg" alt="" />
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_edit.svg" alt="" />編修
+                                                        </button>
+                                                        <button type="button" class="btn btn-gray">
+                                                            <img src="images/icon/i_copy.svg" alt="" />複製
+                                                        </button>
+                                                        <button type="button" class="btn btn-delete">
+                                                            <img src="images/icon/i_trash.svg" alt="" />刪除
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>

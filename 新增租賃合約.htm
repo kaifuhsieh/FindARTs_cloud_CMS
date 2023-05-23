@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>新增租賃合約</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        AUO PO No.<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        DFSI<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        合約編號<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        使用區域<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input
+                                            type="text"
+                                            id=""
+                                            value=""
+                                            placeholder="洲別 / 國家地區 "
+                                        />
+                                        <button
+                                            type="button"
+                                            data-options='{"touch" : false}'
+                                            class="btn btn-primary"
+                                            data-fancybox
+                                            data-src="#hidden-content2"
+                                            href="javascript:;"
+                                        >
+                                            選取區域
+                                        </button>
+                                    </div>
+                                    <!-- 選取組織開啟燈箱 -->
+                                    <div
+                                        style="display: none"
+                                        id="hidden-content2"
+                                        class="fancyLightBox"
+                                    >
+                                        <h2>選取區域</h2>
+                                        <div class="searchRegion">
+                                            <div class="form_grp searchArea">
+                                                <input type="text" placeholder="美國" />
+                                                <button type="button" class="searchBtn btn-primary">
+                                                    <img src="images/icon/i_search.svg" alt="" />
+                                                </button>
+                                            </div>
+                                            <div class="aurora-tag">
+                                                <ul>
+                                                    <li>
+                                                        <span>北美洲</span> /
+                                                        <span>美國全區</span>
+                                                        <a href="#" class="close">
+                                                            <img
+                                                                src="images/icon/i_close.svg"
+                                                                alt=""
+                                                            />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <span>亞洲</span> / <span>台灣</span>
+                                                        <a href="#" class="close">
+                                                            <img
+                                                                src="images/icon/i_close.svg"
+                                                                alt=""
+                                                            />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <span>歐洲</span> /<span
+                                                            >英國、法國全區</span
+                                                        >
+                                                        <a href="#" class="close">
+                                                            <img
+                                                                src="images/icon/i_close.svg"
+                                                                alt=""
+                                                            />
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="chooseCountry">
+                                            <ul>
+                                                <li>
+                                                    <label
+                                                        ><input
+                                                            type="checkbox"
+                                                            value=""
+                                                        />北美洲</label
+                                                    >
+                                                    <ul>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />巴哈馬</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />加拿大</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />美國</label
+                                                            >
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        ><input
+                                                            type="checkbox"
+                                                            value=""
+                                                        />亞洲</label
+                                                    >
+                                                    <ul>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />阿富汗</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />亞美尼亞</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />孟加拉</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />柬埔寨</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />台灣</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />日本</label
+                                                            >
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        ><input
+                                                            type="checkbox"
+                                                            value=""
+                                                        />歐洲</label
+                                                    >
+                                                    <ul>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />英國</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />法國</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />德國</label
+                                                            >
+                                                        </li>
+                                                        <li>
+                                                            <label
+                                                                ><input
+                                                                    type="checkbox"
+                                                                    value=""
+                                                                />比利時</label
+                                                            >
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        ><input
+                                                            type="checkbox"
+                                                            value=""
+                                                        />非洲</label
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        ><input
+                                                            type="checkbox"
+                                                            value=""
+                                                        />中南美洲</label
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button type="button" class="btn btn-submit">
+                                                確定
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        客戶名稱<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="" />
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        組織架構<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="" placeholder="" />
+                                        <button
+                                            type="button"
+                                            data-options='{"touch" : false}'
+                                            class="btn btn-primary"
+                                            data-fancybox
+                                            data-src="#hidden-content"
+                                            href="javascript:;"
+                                        >
+                                            <!-- <img src="images/icon/i_search.svg" alt="" /> -->
+                                            選取組織
+                                        </button>
+                                    </div>
+                                    <!-- 選取組織開啟燈箱 -->
+                                    <div
+                                        style="display: none"
+                                        id="hidden-content"
+                                        class="fancyLightBox"
+                                    >
+                                        <h2>選取組織</h2>
+                                        <div class="form_grp searchArea">
+                                            <input
+                                                type="text"
+                                                placeholder="請輸入洲別、國家名或是組織名稱"
+                                            />
+                                            <button type="button" class="searchBtn btn-primary">
+                                                <img src="images/icon/i_search.svg" alt="" />
+                                            </button>
+                                        </div>
+                                        <div class="pickArea">
+                                            <div class="pickState">
+                                                <ul>
+                                                    <li><a href="#">北美洲</a></li>
+                                                    <li><a href="#">亞洲</a></li>
+                                                    <li><a href="#">歐洲</a></li>
+                                                    <li><a href="#">非洲</a></li>
+                                                    <li><a href="#">中南美洲</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="pickCountry">
+                                                <ul>
+                                                    <li><a href="#">阿富汗</a></li>
+                                                    <li><a href="#">亞美尼亞</a></li>
+                                                    <li><a href="#">孟加拉</a></li>
+                                                    <li><a href="#">柬埔寨</a></li>
+                                                    <li><a href="#">台灣</a></li>
+                                                    <li><a href="#">日本</a></li>
+                                                    <li><a href="#">阿富汗</a></li>
+                                                    <li><a href="#">亞美尼亞</a></li>
+                                                    <li><a href="#">孟加拉</a></li>
+                                                    <li><a href="#">柬埔寨</a></li>
+                                                    <li><a href="#">台灣</a></li>
+                                                    <li><a href="#">日本</a></li>
+                                                    <li><a href="#">阿富汗</a></li>
+                                                    <li><a href="#">亞美尼亞</a></li>
+                                                    <li><a href="#">孟加拉</a></li>
+                                                    <li><a href="#">柬埔寨</a></li>
+                                                    <li><a href="#">台灣</a></li>
+                                                    <li><a href="#">日本</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="pickUnit">
+                                                <ul>
+                                                    <li><a href="#">奇美博物館</a></li>
+                                                    <li><a href="#">故宮博物館</a></li>
+                                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                                    <li><a href="#">中國信託集團</a></li>
+                                                    <li><a href="#">富邦集團</a></li>
+                                                    <li><a href="#">楊三郎畫廊</a></li>
+                                                    <li><a href="#">奇美博物館</a></li>
+                                                    <li><a href="#">故宮博物館</a></li>
+                                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                                    <li><a href="#">中國信託集團</a></li>
+                                                    <li><a href="#">富邦集團</a></li>
+                                                    <li><a href="#">楊三郎畫廊</a></li>
+                                                    <li><a href="#">奇美博物館</a></li>
+                                                    <li><a href="#">故宮博物館</a></li>
+                                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                                    <li><a href="#">中國信託集團</a></li>
+                                                    <li><a href="#">富邦集團</a></li>
+                                                    <li><a href="#">楊三郎畫廊</a></li>
+                                                    <li><a href="#">奇美博物館</a></li>
+                                                    <li><a href="#">故宮博物館</a></li>
+                                                    <li><a href="#">陳澄波文化基金會</a></li>
+                                                    <li><a href="#">中國信託集團</a></li>
+                                                    <li><a href="#">富邦集團</a></li>
+                                                    <li><a href="#">楊三郎畫廊</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <button type="button" class="btn btn-submit">
+                                                確定
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        合約屬性<abbr
+                                            class="necessary"
+                                            title="為必填(選)欄位,不能為空白。"
+                                            >*</abbr
+                                        >
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="radio_grp">
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio"
+                                                    value=""
+                                                    checked=""
+                                                />一般合約</label
+                                            >
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio"
+                                                    value=""
+                                                />展覽(免費)</label
+                                            >
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio"
+                                                    value=""
+                                                />公關使用</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-reset">取消</button>
+                            <button type="button" class="btn btn-submit">
+                                儲存，並建立附約 資訊
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("#header").load("components/header/header.html");
+            $("#nav").load("components/nav/nav.html");
+        </script>
+    </body>
+</html>

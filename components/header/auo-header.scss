@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+// common
+@import '../../sass/_variable'; //變數
+@import '../../sass/sass/common/_mixin'; //客製MIXIN
+
+.auo-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3em;
+    padding: 0.5em 0;
+    background-color: #fff;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 9999;
+    .container {
+        @include gutter;
+        width: 100%;
+        display: flex;
+    }
+    .logo {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 16em;
+        height: 3em;
+        position: relative;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+        }
+    }
+    .user_function {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px;
+        display: flex;
+        justify-content: flex-end;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        // 語系
+        .component_language {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            position: relative;
+
+            .langBtn {
+                border: none;
+                height: 2em;
+                font-size: 0.813em;
+                color: #888;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 0.5em;
+                img {
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin: 0 0.5em 0 0;
+                }
+                &:hover,
+                &:focus {
+                    color: #222;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            .languageBlock {
+                position: absolute;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                right: -1em;
+                top: 2.5em;
+                width: 10em;
+                padding: 0.5em 0;
+                display: none;
+                border-radius: 0.5em;
+                ul {
+                    @include li-reset;
+                    li {
+                        a {
+                            color: #555;
+                            display: block;
+                            text-decoration: none;
+                            font-size: 0.813em;
+                            padding: 0.5em 0.5em 0.5em 2.5em;
+                            position: relative;
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 3px 0 3px 5px;
+                                border-color: transparent transparent transparent #888;
+                                left: 1em;
+                                top: 1.15em;
+                                opacity: 0;
+                                transition: 0.3s ease-out;
+                            }
+                            &:hover,
+                            &:focus {
+                                color: $aHover;
+                                &:before {
+                                    left: 1.5em;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // alert
+        .component_alert {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            position: relative;
+            .alertBtn {
+                border: none;
+                height: 2em;
+                font-size: 0.813em;
+                color: #888;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                padding: 0 0.5em;
+                .count {
+                    position: absolute;
+                    width: 3em;
+                    height: 2em;
+                    line-height: 2em;
+                    text-align: center;
+                    background-color: #ff4300;
+                    color: #fff;
+                    font-weight: bold;
+                    border-radius: 0.5em;
+                    top: -1em;
+                    right: -0.5em;
+                    font-size: 0.813em;
+                }
+                img {
+                    width: 2em;
+                    height: 2em;
+                    margin: 0 0.5em 0 0;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            .alertBlock {
+                position: absolute;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                right: -1em;
+                top: 2.5em;
+                width: 15em;
+                padding: 0.5em;
+                display: none;
+                border-radius: 0.5em;
+                .scrollArea {
+                    width: calc(100% - 1em);
+                    height: 18em;
+                    overflow-x: hidden !important;
+                    overflow-y: auto !important;
+                    -webkit-overflow-scrolling: touch;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1) inset;
+                    outline: 1px solid #f1f1f1;
+                    padding: 0 0.5em;
+                    margin-bottom: 0.5em;
+                }
+                ul {
+                    @include li-reset;
+                    li {
+                        border-bottom: 1px dashed #ddd;
+                        a {
+                            color: #555;
+                            display: block;
+                            text-decoration: none;
+                            font-size: 0.875em;
+                            padding: 1em 1em 1em 1.75em;
+                            position: relative;
+                            height: 5em;
+                            time {
+                                color: #888;
+                            }
+                            span {
+                                @include text-line(2, 1.5em);
+                            }
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 3px 0 3px 5px;
+                                border-color: transparent transparent transparent #888;
+                                left: 0.5em;
+                                top: 1.5em;
+                                opacity: 0.5;
+                                transition: 0.3s ease-out;
+                            }
+                            &:hover,
+                            &:focus {
+                                color: $aHover;
+                                &:before {
+                                    left: 0.75em;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // admin
+        .component_admin {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            position: relative;
+            padding: 0 0.5em;
+            .adminBtn {
+                border: none;
+                height: 2em;
+                font-size: 0.875em;
+                color: #888;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                padding: 0 1em;
+                img {
+                    width: 3em;
+                    height: 3em;
+                    margin: 0 0.5em 0 0;
+                    border-radius: 50%;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            .adminBlock {
+                position: absolute;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                right: 0;
+                top: 2.5em;
+                width: 15em;
+                padding: 0.5em;
+                display: none;
+                border-radius: 0.5em;
+                ul {
+                    @include li-reset;
+                    padding: 0.25em 0.5em;
+                    margin-bottom: 2em;
+                    li {
+                        border-bottom: 1px dashed #ddd;
+                        a {
+                            color: #555;
+                            display: block;
+                            text-decoration: none;
+                            font-size: 0.875em;
+                            padding: 0.1em 1em 0.1em 1.25em;
+                            position: relative;
+                            margin: 0.25em 0;
+                            span {
+                                @include text-line(2, 1.5em);
+                            }
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 3px 0 3px 5px;
+                                border-color: transparent transparent transparent #888;
+                                left: 0.25em;
+                                top: 0.65em;
+                                opacity: 0.5;
+                                transition: 0.3s ease-out;
+                            }
+                            &:hover,
+                            &:focus {
+                                color: $aHover;
+                                &:before {
+                                    left: 0.5em;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_grp {
+                    padding: 0.25em;
+                    .btn {
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: 30%;
+                        width: 100%;
+                        font-size: 0.938em;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 1.2em;
+                            height: 1.2em;
+                            filter: invert(100%);
+                            margin: 0 0.25em 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

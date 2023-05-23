@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aurora CMS</title>
+        <link rel="stylesheet" href="css/aurora.min.css" />
+        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+        <!-- dropzone -->
+        <link rel="stylesheet" href="vendor/dropzone/dropzone.css" />
+        <!-- JQ -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/auo-customize.js"></script>
+        <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+        <!-- fav_ico -->
+        <link type="image/ico" rel="icon" href="images/favicon.png" />
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <!-- nav -->
+        <nav id="nav"></nav>
+        <!-- content -->
+        <div class="mainContent">
+            <div class="container">
+                <!-- contentHead -->
+                <div class="contentHead">
+                    <h2 class="h2_title"><span>編修場址</span></h2>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- main -->
+                <div class="flex-12">
+                    <div class="col">
+                        <div class="gridBlock">
+                            <div class="license_block">
+                                <div class="form_grid">
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            場域編號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                        </div>
+                                        <div class="form_content">
+                                            <span>123456 - 001</span>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">
+                                            DFSI<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                        </div>
+                                        <div class="form_content">
+                                            <div class="aurora-tag">
+                                                <ul>
+                                                    <li>
+                                                        <span>北美洲</span> /
+                                                        <span>美國全區</span>
+                                                    </li>
+                                                    <li><span>亞洲</span> / <span>台灣</span></li>
+                                                    <li><span>歐洲</span> /<span>英國、法國全區</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">場域名稱</div>
+                                        <div class="form_content">
+                                            <input type="text" id="" value="奇美博物館一館" />
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="field_name">組織架構</div>
+                                        <div class="form_content">
+                                            <span>奇美集團</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="controlPanel">
+                            <h3 class="h3_title">圖片總張數</h3>
+                            <button
+                                type="button"
+                                data-options='{"touch" : false}'
+                                class="btn-add btn-green"
+                                data-fancybox
+                                data-src="#addVaue"
+                                href="javascript:;"
+                            >
+                                <img src="images/icon/i_plus.svg" alt="" />加值
+                            </button>
+                        </div>
+                        <!-- 選取組織開啟燈箱 -->
+                        <div style="display: none" id="addVaue" class="fancyLightBox">
+                            <h2>加值圖片張數</h2>
+                            <div class="form_grid">
+                                <div class="form_grp">
+                                    <div class="field_name">圖片規格張數</div>
+                                    <div class="form_content">
+                                        <div class="other_option check_align">
+                                            <ul>
+                                                <li><span>17吋-2K2K</span><input type="text" value="" />張</li>
+                                                <li><span>32吋-2K4K(V)</span><input type="text" value="" />張</li>
+                                                <li><span>32吋-2K4K(H)</span><input type="text" value="" />張</li>
+                                                <li><span>75吋-8K4K</span><input type="text" value="" />張</li>
+                                                <li><span>85吋-8K4K</span><input type="text" value="" />張</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        有效起迄日<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="datepick">
+                                            <input
+                                                name=""
+                                                type="text"
+                                                value=""
+                                                class="calendar"
+                                                placeholder="開始日期"
+                                            />
+                                            <img src="images/icon/i_calendar.svg" alt="" />
+                                        </div>
+                                        <div class="datepick">
+                                            <input
+                                                name=""
+                                                type="text"
+                                                value=""
+                                                class="calendar"
+                                                placeholder="結束日期"
+                                            />
+                                            <img src="images/icon/i_calendar.svg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">
+                                        收費機制<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                    </div>
+                                    <div class="form_content">
+                                        <div class="radio_grp">
+                                            <label
+                                                ><input
+                                                    type="radio"
+                                                    name="sampleradio"
+                                                    value=""
+                                                    checked=""
+                                                />付費</label
+                                            >
+                                            <label><input type="radio" name="sampleradio" value="" />免費</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <div class="field_name">附件上傳</div>
+                                    <div class="form_content">
+                                        <div class="uploadFile dropzone dz-clickable">
+                                            <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+                                                <div class="dz-default dz-message">
+                                                    <button class="dz-button" type="button">
+                                                        <img src="images/icon/i_upload.svg" alt="" />
+                                                        Drop files here or click to upload
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="uploadFileList">
+                                            <ul>
+                                                <li>2022春季系列授權書.pdf</li>
+                                                <li>合作備忘錄.pdf</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <script src="vendor/dropzone/dropzone.js"></script>
+                                    <script>
+                                        $('.uploadFile').dropzone({ url: '/file/post' });
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <button type="button" class="btn btn-reset">取消</button>
+                                <button type="button" class="btn btn-submit">儲存</button>
+                            </div>
+                        </div>
+                        <div class="gridBlock">
+                            <div class="license_block">
+                                <div class="form_grid">
+                                    <div class="flex-4-8">
+                                        <div class="col">
+                                            <div class="picture_total">
+                                                <h4>
+                                                    目前圖片總張數
+                                                    <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                                </h4>
+                                                <ul>
+                                                    <li>
+                                                        <span class="equipment">17吋-2K2K</span>
+                                                        <span class="num">5</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="equipment">17吋-2K2K</span>
+                                                        <span class="num">5</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="equipment">17吋-2K2K</span>
+                                                        <span class="num">5</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="equipment">17吋-2K2K</span>
+                                                        <span class="num">5</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="equipment">17吋-2K2K</span>
+                                                        <span class="num">5</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="sum">
+                                                    <span>30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="history">
+                                                <h4>歷程檢視</h4>
+                                                <ul>
+                                                    <li>
+                                                        <div class="title">圖片加值時間</div>
+                                                        <time>2022 / 01 / 01</time>
+                                                        <div class="type">加值類型 <span class="blue">免費</span></div>
+                                                        <div class="piece">
+                                                            圖片張數
+                                                            <span class="num blue">30</span>
+                                                        </div>
+                                                        <button type="button" class="btn">
+                                                            <img src="images/icon/i_edit.svg" alt="" />
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <div class="title">圖片加值時間</div>
+                                                        <time>2022 / 01 / 01</time>
+                                                        <div class="type">加值類型 <span class="blue">免費</span></div>
+                                                        <div class="piece">
+                                                            圖片張數
+                                                            <span class="num blue">30</span>
+                                                        </div>
+                                                        <button type="button" class="btn">
+                                                            <img src="images/icon/i_edit.svg" alt="" />
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <div class="title">圖片加值時間</div>
+                                                        <time>2022 / 01 / 01</time>
+                                                        <div class="type">加值類型 <span>免費</span></div>
+                                                        <div class="piece">圖片張數 <span class="num">30</span></div>
+                                                        <button type="button" class="btn">
+                                                            <img src="images/icon/i_edit.svg" alt="" />
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <div class="title">圖片加值時間</div>
+                                                        <time>2022 / 01 / 01</time>
+                                                        <div class="type">加值類型 <span>免費</span></div>
+                                                        <div class="piece">圖片張數 <span class="num">30</span></div>
+                                                        <button type="button" class="btn">
+                                                            <img src="images/icon/i_edit.svg" alt="" />
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <div class="title">圖片加值時間</div>
+                                                        <time>2022 / 01 / 01</time>
+                                                        <div class="type">加值類型 <span>免費</span></div>
+                                                        <div class="piece">圖片張數 <span class="num">30</span></div>
+                                                        <button type="button" class="btn">
+                                                            <img src="images/icon/i_edit.svg" alt="" />
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="flex-6-6">
+                            <div class="col">
+                                <div class="buttonPickPicture">
+                                    <h4><img src="images/cloud.svg" alt="" />畫作挑選</h4>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-primary">挑選圖片</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="buttonPickPicture">
+                                    <h4><img src="images/monitor.svg" alt="" />裝置管理</h4>
+
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-primary">建立裝置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-reset">取消</button>
+                            <button type="button" class="btn btn-submit">儲存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $('#header').load('components/header/header.html');
+            $('#nav').load('components/nav/nav.html');
+        </script>
+    </body>
+</html>
